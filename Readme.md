@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Наталья Алисова](https://up.htmlacademy.ru/htmlcss/23/user/828879).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Кравченко](https://htmlacademy.ru/profile/dreamoctober).
 
 ---
 
