@@ -6,56 +6,84 @@
   </head>
   <body>
 	<header class="main-header">
-		<div class="top-hat">
-			<div class="logo">
-				<p>ТЕХНОМАРТ</p>
-			</div>
-			или
+		<section class="header-top">
 			<a class="main-header-logo">
-				<img src="img/index-logo.svg" width="100" height="50" alt="Логотип Техномарта">
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Техномарта">
 			</a>
-			
-			<div class="search">
-				<input type="text" name="search" value="Поиск:">
-			</div>
-
-			<div class="float right">
+			<nav class="user-nav-list">
+				<form action="https://" method="get"><!--форма поиска-->
+					<input type="text" name="search" placeholder="Поиск:">
+				</form>
 				<div class="bookmark">
-					<a href="#">Закладки</a>
+					<a href="#">Закладки:</a>
+					<span>0</span>
 				</div>
 				<div class="basket">
-					<a href="#">Корзина</a>
+					<a href="#">Корзина:</a>
+					<span>0</span>
 				</div>
 				<div class="order">
-					<input type="submit" name="place-your-order" value="Оформить заказ">
+					<a class="button-header href="#">Оформить заказ</a>
 				</div>
+			</nav>
+		</section>
+		<section class="header-middle">
+			<div>
+				<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 			</div>
-		</div>
-		<div class="title">
-			<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-		</div>
-		<div>
-			<p class="header-phone">+7 (812) 555-05-55</p>
-			<p class="address">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
-		</div>
-		<nav class="main-navigation">
-			<ul class="user-navigation">
-				<li> <a href="">Войти</a></li>
-				<li> <a href="">Регистрация</a></li>
-			</ul>
-			<ul class="site-navigation">
-				<li> <a href="index.html">Главная</a></li>
-				<li> <a href="company.html">Компания</a></li>
-				<li> <a href="catalog.html">Каталог</a></li>
-				<li> <a href="news.html">Новости</a></li>
-				<li> <a href="specialoffer.html">Спецпредложения</a></li>
-				<li> <a href="delivery.html">Доставка</a></li>
-				<li> <a href="contacts.html">Контакты</a></li>
-			</ul>
-		</nav>
-
+			<div class="header-contact">
+				<a class="header-phone" href="tel:78125550555">+7 (812) 555-05-55</a>
+				<p class="address">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
+			</div>
+			<nav class="main-navigation">
+				<ul class="user-navigation">
+					<li> <a href="#">Войти</a></li>
+					<li> <a href="#">Регистрация</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="header-bottom">
+			<nav>
+				<ul class="site-navigation">
+					<li> <a href="index.html">Главная</a></li>
+					<li> <a href="#">Компания</a></li>
+					<li> <a href="catalog.html">Каталог</a></li>
+					<li> <a href="#">Новости</a></li>
+					<li> <a href="#">Спецпредложения</a></li>
+					<li> <a href="#">Доставка</a></li>
+					<li> <a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</section>
 	</header>
-	<main class="container">
+	<main>
+		<section class="info-company">
+			<div class="info">
+				<h2>Компания "Техномарт"</h2>
+				<p class="info-choice">
+					Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
+				</p>
+				<p class="info-delivery">
+				    Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+				    Техномарт работает со многими транспортными компаниями:					
+				</p>
+				<ul class="info-delivery-choice">
+					<li><a href="#">Деловые линии</a></li>
+					<li><a href="#">Автотрейдинг</a></li>
+					<li><a href="#">ЖелДорЭкспедиция</a></li>
+				</ul>
+				<a class="button" href="#">Подробнее о компании</a>
+			</div>
+			<div class="contact">
+				<h2>Контакты</h2>
+				<p class="contact-office">
+					Вы можете забрать товар сами, <br>
+					заехав в наш офис:
+				</p>
+				<img src="http://placehold.it/150x100" width="150" height="100" alt="Карта проезда">
+				<a class="button" href="#">Заблудились? Напишите нам</a>
+			</div>
+		</section>
       
     </main>
 
