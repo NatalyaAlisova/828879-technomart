@@ -12,20 +12,15 @@
 				<img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Техномарта">
 			</a>
 			<nav class="user-nav-list">
-				<form action="https://" method="get"><!--форма поиска-->
+				<!--форма поиска-->
+				<form action="https://" method="get">
 					<input type="text" name="search" placeholder="Поиск:">
 				</form>
-				<div class="bookmark">
-					<a href="#">Закладки:</a>
-					<span>0</span>
-				</div>
-				<div class="basket">
-					<a href="#">Корзина:</a>
-					<span>0</span>
-				</div>
-				<div class="order-button">
-					<a class="order-button" href="#">Оформить заказ</a>
-				</div>
+				<a class="bookmark" href="#">Закладки:</a>
+				<span class="bookmark-counter">0</span>
+				<a class="basket"href="#">Корзина:</a>
+				<span class="basket-counter">0</span>
+				<a class="order-button" href="#">Оформить заказ</a>
 			</nav>
 		</section>
 
@@ -47,14 +42,28 @@
 
 		<section class="header-bottom">
 			<nav>
-				<ul class="site-navigation">
-					<li> <a href="index.html">Главная</a></li>
-					<li> <a href="#">Компания</a></li>
-					<li> <a href="catalog.html">Каталог</a></li>
-					<li> <a href="#">Новости</a></li>
-					<li> <a href="#">Спецпредложения</a></li>
-					<li> <a href="#">Доставка</a></li>
-					<li> <a href="#">Контакты</a></li>
+				<ul class="user-navigation-list">
+					<li class="user-navigation-item"> 
+						<a href="index.html">Главная</a>
+					</li>
+					<li class="user-navigation-item">
+						<a href="#">Компания</a>
+					</li>
+					<li class="user-navigation-item">
+						<a href="catalog.html">Каталог</a>
+					</li>
+					<li class="user-navigation-item">
+						<a href="#">Новости</a>
+					</li>
+					<li class="user-navigation-item">
+						<a href="#">Спецпредложения</a>
+					</li>
+					<li class="user-navigation-item">
+						<a href="#">Доставка</a>
+					</li>
+					<li class="user-navigation-item">
+						<a href="#">Контакты</a>
+					</li>
 				</ul>
 			</nav>
 		</section>
@@ -62,22 +71,28 @@
 
 	<main>
 
-		<section class="info-company">
-			<div class="info">
+		<section class="info">
+			<div class="info-company">
 				<h2>Компания "Техномарт"</h2>
-				<p class="info-choice">
+				<p class="info-text">
 					Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
 				</p>
-				<p class="info-delivery">
+				<p class="info-text">
 				    Мы можем доставить ваш товар в самые отдаленные точки России!<br>
 				    Техномарт работает со многими транспортными компаниями:					
 				</p>
-				<ul class="info-delivery-choice">
-					<li><a href="#">Деловые линии</a></li>
-					<li><a href="#">Автотрейдинг</a></li>
-					<li><a href="#">ЖелДорЭкспедиция</a></li>
+				<ul class="info-partners-list">
+					<li>
+						<a href="#">Деловые линии</a>
+					</li>
+					<li>
+						<a href="#">Автотрейдинг</a>
+					</li>
+					<li>
+						<a href="#">ЖелДорЭкспедиция</a>
+					</li>
 				</ul>
-				<a class="button" href="#">Подробнее о компании</a>
+				<a class="button-about-company" href="#">Подробнее о компании</a>
 			</div>
 			<div class="contact">
 				<h2>Контакты</h2>
@@ -86,7 +101,7 @@
 					заехав в наш офис:
 				</p>
 				<img src="http://placehold.it/150x100" width="150" height="100" alt="Карта проезда">
-				<a class="button" href="#">Заблудились? Напишите нам</a>
+				<a class="button-write" href="#">Заблудились? Напишите нам!</a>
 			</div>
 		</section>
       
@@ -97,13 +112,23 @@
 			<a class="main-footer-logo">
 				<img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Техномарта">
 			</a>
-			<nav>
-				<ul class="footer-navigation-up">
-					<li><a href="#">Компания</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Контакты</a></li>
+			<nav class="footer-nav">
+				<ul class="footer-navigation-list">
+					<li>
+						<a href="#">Компания</a>
+					</li>
+					<li>
+						<a href="#">Новости</a>
+					</li>
+					<li>
+						<a href="#">Каталог</a>
+					</li>
+					<li>
+						<a href="#">Доставка</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
 				</ul>
 			</nav>
 		</section>
@@ -115,10 +140,18 @@
 			</div>
 			<nav>
 				<ul class="catalog-navigation">
-					<li><a href="#">Материалы</a></li>
-					<li><a href="#">Техника</a></li>
-					<li><a href="#">Инструменты</a></li>
-					<li><a href="#">Спецпредложения</a></li>
+					<li>
+						<a href="#">Материалы</a>
+					</li>
+					<li>
+						<a href="#">Техника</a>
+					</li>
+					<li>
+						<a href="#">Инструменты</a>
+					</li>
+					<li>
+						<a href="#">Спецпредложения</a>
+					</li>
 				</ul>
 			</nav>
 		</section>
@@ -130,22 +163,24 @@
 			</div>
 			<div class="fotter-social">
 				<ul>
-					<li><a class="social-button" href="https://vk.com/htmlacademy">Вконтакте</a></li>
-					<li><a class="social-button" href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
-					<li><a class="social-button" href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
+					<li>
+						<a class="social-button" href="https://vk.com/htmlacademy">Вконтакте</a>
+					</li>
+					<li>
+						<a class="social-button" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+					</li>
+					<li>
+						<a class="social-button" href="https://www.instagram.com/htmlacademy/">Инстаграм</a>
+					</li>
 				</ul>
 			</div>
 			<div class="footer-feedback">
 				<p>Обратная связь:</p>
-				<p>
-					<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-				</p>
+				<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 			</div>
 			<div class="footer-developing">
 				<p>Разработано-</p>
-				<p>
-					<a href="https://htmlacademy.ru">htmlacademy.ru</a>
-				</p>
+				<a href="https://htmlacademy.ru">htmlacademy.ru</a>
 			</div>
 		</section>
 	</footer>
