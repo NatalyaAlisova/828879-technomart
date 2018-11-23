@@ -34,8 +34,12 @@
 			</div>
 			<nav class="main-nav">
 				<ul class="user-nav">
-					<li class="user-nav-item"> <a href="#">Войти</a></li>
-					<li class="user-nav-item"> <a href="#">Регистрация</a></li>
+					<li class="user-nav-item">
+						<a href="#">Войти</a>
+					</li>
+					<li class="user-nav-item">
+						<a href="#">Регистрация</a>
+					</li>
 				</ul>
 			</nav>
 		</section>
@@ -104,13 +108,49 @@
 				<a class="button-write" href="#">Заблудились? Напишите нам!</a>
 			</div>
 		</section>
+
+		<section class="modal modal-map">
+			<h2 class="visually-hidden">Как до нас добраться?</h2>
+			<p>
+          		<img src="img/content-img/4.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        	</p>
+        	<button class="modal-close" type="button">
+          		Закрыть
+        	</button>
+		</section>
+
+		
+		<section class="modal modal-search">
+			<h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
+			<form action="#" method="post">
+				<!--нужно ли каждое поле оборачивать в p?-->
+				<p>
+					<label for="name">Ваше имя:</label>
+					<input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
+				</p>
+				<p>
+					<label for="email">Ваш email:</label>
+					<input type="email" id="email" name="email" placeholder="email@examble.com" required>
+				</p>
+				<p>
+					<label for="comment-field">Текст письма:</label>
+					<textarea id="comment-field" name="comment" rows="0" cols="0" required>В свободной форме</textarea>
+				</p>
+				<div class="button button-send">
+					<input type="submit" value="Отправить">
+				</div>
+			</form>
+			<button class="modal-close" type="button">
+          		Закрыть
+        	</button>
+		</section>
       
     </main>
 
 	<footer>
 		<section class="footer-top">
 			<a class="main-footer-logo">
-				<img src="img/content-img/invalid-name.png" width="138" height="23" alt="Логотип Техномарта">
+				<img src="img/content-img/invalid-name.png" width="138" height="23" alt="Логотип Техномарта"><!--белый текст не виден на странице-->
 			</a>
 			<nav class="footer-nav">
 				<ul class="footer-navigation-list">
