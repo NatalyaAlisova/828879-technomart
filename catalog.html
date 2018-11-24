@@ -98,112 +98,59 @@
 		</ul>
 		
 		<h1 class="main-title">Перфораторы</h1>
-
-
-		<!--здесь будет фильтр с ползунком-->	
+		
 		<section class="filters">
-			<h2 class="visually-hidden">Фильтр товара</h2>
-			<form class="developers-title" action="#" method="post">
-				<!-- <fieldset> в работе
-					<legend>Фильтр:</legend>
-					<div class="price-input">
-			          <label for="price-slider">Цена:</label>
-			          <input type="range" id="price-slider" name="price-slider" min="1" max="30000" step="1">
-			          <span>0</span>
-			          <span>-</span>
-			          <span>30000</span>
-        			</div>
-				</fieldset> -->
-				<fieldset>
-					<legend>Производители</legend>
-					<ul>
-						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="BOSCH" id="BOSCH-field" area-label="BOSCH" checked>
-							<label for="BOSCH-field">
-								Bosch
-							</label>
-						</li>
-						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="interskol" id="interskol-field" area-label="Интерскол">
-							<label for="interskol-field">
-								Интерскол
-							</label>
-						</li>
-						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Makita" id="Makita-field" area-label="Makita" checked>
-							<label for="Makita-field">
-								Makita
-							</label>
-						</li>
-						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Dewalt" id="Dewalt-field" area-label="Dewalt">
-							<label for="Dewalt-field">
-								Dewalt
-							</label>
-						</li>
-						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Hitachi" id="Hitachi-field" area-label="Hitachi">
-							<label for="Hitachi-field">
-								Hitachi
-							</label>
-						</li>
-					</ul>
-				</fieldset>	
-				<fieldset>
-					<legend>Питание</legend>
-						<ul>
-							<li class="developers-option">
-								<input class="visually-hidden developers-input developers-input-radio" type="radio" name="food-group" value="accumulator" area-label="Аккумуляторные" id="accumulator-group" checked>
-								<label for="accumulator-group">
-									Аккумуляторные	
-								</label>
-							</li>
-							<li class="developers-option">
-								<input class="visually-hidden developers-input developers-input-radio" type="radio" name="food-group" value="accumulator" area-label="Сетевые" id="network-group">
-								<label for="network-group">
-									Сетевые
-								</label>
-							</li>
-						</ul>
-				</fieldset>
-				<button type="submit" class="filter-button button">
-					Показать
-				</button>	
-			</form>
+			<!--здесь будет фильтр с ползунком-->	
+		
+			<div class="developers-field">
+				<form action="#" method="post">
+					<h3>Производители</h3>
+					<input type="checkbox" name="BOSCH" id="BOSCH-field" title="BOSCH" checked>
+					<label for="BOSCH-field">
+						Bosch
+					</label>	
+				</form>
+			</div>
+				<form action="#" method="post">
+					<h3>Питание</h3>
+					<input type="radio" name="food" value="accumulator" checked>
+					<label>
+						Аккумуляторные
+					</label>
+					<input type="radio" name="food" value="networking">
+					<label>
+						Сетевые
+					</label>
+
+					<a class="show" href="#">Показать</a>
+				</form>
 		</section>
 
 		<section class="catalog">
 
 			<h2 class="visually-hidden">Список перфораторов</h2>
 
-			<ul class="product-list"> <!--вот так? все равно сложно, нужно обсудить сегодня вечером-->
+			<ul class="product-list"> <!--сделала один для образца, после проверки и исправления замечаний, сделаю остальные-->
 				<li class="product-item">
+					<h3 class="product-title">
+						<a href="product-item.html">
+							<span class="product-name">Перфоратор BOSCH</span>
+							<span class="product-mark">BFG 3000</span>
+						</a>
+					</h3>
 					<div class="product-img-wrapper">
 						<a href="#">
 							<img src="img/content-img/snippet-18927-copy-3.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
 						</a>
 					</div>
+					<p class="product-item-price-old">22500 P.</p>
+					<p class="product-item-price">15500 P.</p>
 					<div>
 						<a class="buy" href="#">Купить</a>
 						<button class="bookmark">В закладки</button>
 					</div>
-					<h3 class="product-title">Перфоратор BOSCH</h3>
-					<p class="product-mark">
-						BFG 3000
-					</p>
-					<p class="product-item-price-old">
-						22500 P.
-					</p>	
-					<p class="product-item-price">
-						<img src="img/content-img/btn-copy-14.png" width="141" height="38" alt="Цена 15500 р.">
-						15500 P.
-					</p>
-					<p class="product-item-price-new visually-hidden">
-						<img src="img/content-img/new-flag.png" width="60" height="59" alt="Новинка"><!--пункт 3.17 ТЗ, так верно указать?-->
-					</p>
 				</li>
 			</ul>
-
 
 			<ul class="pagination-list">
 				<li class="pagination-item">
