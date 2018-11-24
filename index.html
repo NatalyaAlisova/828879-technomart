@@ -8,23 +8,26 @@
 	<header class="main-header">
 		
 		<section class="header-top">
+			<h2 class="visually-hidden">Вот как назвать Верхняя навигация? или Поиск</h2>
 			<a class="main-header-logo">
 				<img src="img/content-img/invalid-name.png" width="220" height="47" alt="Логотип Техномарта"><!--белый текст не виден на странице-->
 			</a>
-			<nav class="user-nav-list">
+			<div class="user-nav-list">
 				<!--форма поиска-->
 				<form action="https://" method="get">
+					<input type="text" name="search" placeholder="Поиск:">
 					<input type="text" name="search" placeholder="Поиск:">
 				</form>
 				<a class="bookmark" href="#">Закладки:</a>
 				<span class="bookmark-counter">0</span>
-				<a class="basket"href="#">Корзина:</a>
+				<a class="basket" href="#">Корзина:</a>
 				<span class="basket-counter">0</span>
 				<a class="order-button" href="#">Оформить заказ</a>
-			</nav>
+			</div>
 		</section>
 
 		<section class="header-middle">
+			<h2 class="visually-hidden">Навигация для пользователя</h2>
 			<div>
 				<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 			</div>
@@ -45,6 +48,7 @@
 		</section>
 
 		<section class="header-bottom">
+			<h2 class="visually-hidden">Основное меню</h2>
 			<nav>
 				<ul class="user-navigation-list">
 					<li class="user-navigation-item"> 
@@ -76,6 +80,7 @@
 	<main>
 
 		<section class="info">
+			<h2 class="visually-hidden">Информация о компании и доставке</h2>
 			<div class="info-company">
 				<h2>Компания "Техномарт"</h2>
 				<p class="info-text">
@@ -115,7 +120,7 @@
           		<img src="img/content-img/4.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         	</p>
         	<button class="modal-close" type="button">
-          		Закрыть
+          		<span class="visually-hidden">Закрыть</span>
         	</button>
 		</section>
 
@@ -123,25 +128,26 @@
 		<section class="modal modal-search">
 			<h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
 			<form action="#" method="post">
-				<!--нужно ли каждое поле оборачивать в p?-->
-				<p>
+				<div>
 					<label for="name">Ваше имя:</label>
 					<input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
-				</p>
-				<p>
+				</div>
+				<div>			
 					<label for="email">Ваш email:</label>
 					<input type="email" id="email" name="email" placeholder="email@examble.com" required>
-				</p>
-				<p>
+				</div>
+				<div>
 					<label for="comment-field">Текст письма:</label>
-					<textarea id="comment-field" name="comment" rows="0" cols="0" required>В свободной форме</textarea>
-				</p>
+					<textarea id="comment-field" name="comment" required>В свободной форме</textarea>
+				</div>
 				<div class="button button-send">
-					<input type="submit" value="Отправить">
+					<button type="submit">
+						Отправить
+					</button>
 				</div>
 			</form>
 			<button class="modal-close" type="button">
-          		Закрыть
+          		<span class="visually-hidden">Закрыть</span>
         	</button>
 		</section>
       
@@ -149,6 +155,7 @@
 
 	<footer>
 		<section class="footer-top">
+			<h2 class="visually-hidden">Навигация</h2>
 			<a class="main-footer-logo">
 				<img src="img/content-img/invalid-name.png" width="138" height="23" alt="Логотип Техномарта"><!--белый текст не виден на странице-->
 			</a>
@@ -174,6 +181,7 @@
 		</section>
 
 		<section class="footer-middle">
+			<h2 class="visually-hidden">Контакты компании</h2>
 			<div class="footer-contatcs">
 				<p>г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
 				<a class="footer-phone" href="tel:78125550555">+7 (812) 555-05-55</a>
@@ -197,6 +205,7 @@
 		</section>
 
 		<section class="footer-bottom">
+			<h2 class="visually-hidden">Социальные сети</h2>
 			<div class="reserved">
 				<p>© 2010-2017 Компания "Техномарт"</p>
 				<p>Все права защищены</p>
