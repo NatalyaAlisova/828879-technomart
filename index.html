@@ -27,24 +27,19 @@
 		</section>
 
 		<section class="header-middle">
-			<h2 class="visually-hidden">Навигация для пользователя</h2>
-			<div>
-				<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-			</div>
+			<h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 			<div class="header-contact">
 				<a class="header-phone" href="tel:78125550555">+7 (812) 555-05-55</a>
 				<p class="address">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
 			</div>
-			<div>
-				<ul class="user-nav">
-					<li class="user-nav-item">
-						<a href="#">Войти</a>
-					</li>
-					<li class="user-nav-item">
-						<a href="#">Регистрация</a>
-					</li>
-				</ul>
-			</div>
+			<ul class="user-nav">
+				<li class="user-nav-item">
+					<a href="#">Войти</a>
+				</li>
+				<li class="user-nav-item">
+					<a href="#">Регистрация</a>
+				</li>
+			</ul>
 		</section>
 
 		<section class="header-bottom">
@@ -79,18 +74,6 @@
 
 	<main>
 
-		<section>
-			<div class="contact">
-				<h2>Контакты</h2>
-				<p class="contact-office">
-					Вы можете забрать товар сами, <br>
-					заехав в наш офис:
-				</p>
-				<img src="img/content-img/5.jpg" width="300" height="158" alt="Карта проезда">
-				<a class="button-write" href="#">Заблудились? Напишите нам!</a>
-			</div>
-		</section>
-
 		<section class="info">
 			<h2 class="visually-hidden">Информация о компании и доставке</h2>
 			<div class="info-company">
@@ -117,16 +100,18 @@
 			</div>
 		</section>
 
-		<section class="modal modal-map">
-			<h2 class="visually-hidden">Как до нас добраться?</h2>
-			<p>
-          		<img src="img/content-img/4.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        	</p>
-        	<button class="modal-close" type="button">
-          		<span class="visually-hidden">Закрыть</span>
-        	</button>
+		<section>
+			<div class="contact">
+				<h2>Контакты</h2>
+				<p class="contact-office">
+					Вы можете забрать товар сами, <br>
+					заехав в наш офис:
+				</p>
+				<img src="img/content-img/5.jpg" width="300" height="158" alt="Карта проезда">
+				<a class="button-write" href="#">Заблудились? Напишите нам!</a>
+			</div>
 		</section>
-      
+    
     </main>
 
 	<footer>
@@ -216,20 +201,30 @@
 		</section>
 	</footer>
 
+	<section class="modal modal-map">
+			<h2 class="visually-hidden">Как до нас добраться?</h2>
+			<p>
+          		<img src="img/content-img/4.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        	</p>
+        	<button class="modal-close" type="button">
+          		<span class="visually-hidden">Закрыть</span>
+        	</button>
+	</section>
+
 	<section class="modal modal-search">
 			<h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
 			<form action="#" method="post">
 				<div>
 					<label for="name">Ваше имя:</label>
-					<input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
+					<input type="text" id="name" name="Имя" placeholder="Имя Фамилия" required>
 				</div>
 				<div>			
 					<label for="email">Ваш email:</label>
-					<input type="email" id="email" name="email" placeholder="email@examble.com" required>
+					<input type="email" id="email" name="Эл.адрес" placeholder="email@examble.com" required>
 				</div>
 				<div>
 					<label for="comment-field">Текст письма:</label>
-					<textarea id="comment-field" name="comment" required>В свободной форме</textarea>
+					<textarea id="comment-field" name="Доп.комментарий" required>В свободной форме</textarea>
 				</div>
 				<div class="button button-send">
 					<button type="submit">
