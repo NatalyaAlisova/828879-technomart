@@ -8,16 +8,14 @@
 	<header class="main-header">
 
 		<section class="header-top">
-			<h2 class="visually-hidden">Вот как назвать Верхняя навигация? или Поиск</h2>
 			<a class="main-header-logo" href="index.html">
-				<img src="img/content-img/invalid-name.png" width="220" height="47" alt="Логотип Техномарта">
+				<img src="img/content-img/logo-header.png" width="220" height="47" alt="Логотип Техномарта">
 			</a>
 			<div class="user-nav-list">
-				<!--форма поиска-->
-				<form action="https://" method="get">
+				<form class="form-search" action="https://" method="get">
 					<button type="submit"></button>
 					<input type="text" name="search" placeholder="Поиск:">
-				 </form>
+				</form>
 				<a class="bookmark-header" href="#">Закладки:</a>
 				<span class="bookmark-counter">0</span>
 				<a class="basket" href="#">Корзина:</a>
@@ -36,19 +34,19 @@
 				<p class="address">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
 			</div>
 			
-				<ul class="main-navigation-list">
-					<li class="main-navigation-item">
-						<a class="main-navigation-user" href="#" title="Равшан Джамшутович">
-							<span class="main-navigation-username">Равшан Джамшутович</span>
+				<ul class="user-nav-list">
+					<li class="user-nav-item">
+						<a class="user-nav-link" href="#" title="Равшан Джамшутович">
+							<span class="user-nav-username">Равшан Джамшутович</span>
 						</a>
 					</li>
-					<li class="main-navigation-item">
+					<li class="main-nav-item">
 						<a href="#" title="Выйти"></a>
 					</li>
-					<li class="navigation-user-item">
+					<li class="nav-user-item">
 						<a href="#">Мои заказы</a>
 					</li>
-					<li class="navigation-user-item">
+					<li class="nav-user-item">
 						<a href="#">Личный кабинет</a>
 					</li>
 				</ul>
@@ -57,27 +55,27 @@
 
 		<section class="header-bottom">
 			<h2 class="visually-hidden">Основное меню</h2>
-			<nav>
-				<ul class="user-navigation-list">
-					<li class="user-navigation-item"> 
+			<nav class="main-nav">
+				<ul class="main-nav-list">
+					<li class="main-nav-item"> 
 						<a href="index.html">Главная</a>
 					</li>
-					<li class="user-navigation-item">
+					<li class="main-nav-item">
 						<a href="#">Компания</a>
 					</li>
-					<li class="user-navigation-item">
+					<li class="main-nav-item">
 						<a href="#">Каталог</a>
 					</li>
-					<li class="user-navigation-item">
+					<li class="main-nav-item">
 						<a href="#">Новости</a>
 					</li>
-					<li class="user-navigation-item">
+					<li class="main-nav-item">
 						<a href="#">Спецпредложения</a>
 					</li>
-					<li class="user-navigation-item">
+					<li class="main-nav-item">
 						<a href="#">Доставка</a>
 					</li>
-					<li class="user-navigation-item">
+					<li class="main-nav-item">
 						<a href="#">Контакты</a>
 					</li>
 				</ul>
@@ -106,16 +104,6 @@
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр товара</h2>
 			<form class="developers-title" action="#" method="post">
-				<!-- <fieldset> в работе ползунок
-					<legend>Фильтр:</legend>
-					<div class="price-input">
-			          <label for="price-slider">Цена:</label>
-			          <input type="range" id="price-slider" name="price-slider" min="1" max="30000" step="1">
-			          <span>0</span>
-			          <span>-</span>
-			          <span>30000</span>
-        			</div>
-				</fieldset> -->
 				<fieldset>
 					<legend>Производители</legend>
 					<ul>
@@ -200,9 +188,6 @@
 						<p class="product-item-price">15500 P.</p>
 					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -224,9 +209,6 @@
 						<p class="product-item-price">25500 P.</p>
 					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -246,14 +228,7 @@
 						<p class="product-mark">BFG 2000</p>
 						<p class="product-item-price">12500 P.</p>
 					</div>
-
-					<div class="product-item-price-new visually-hidden">
-						<img src="img/content-img/new-flag.png" width="60" height="59" alt="Новинка">
-					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -275,9 +250,6 @@
 						<p class="product-item-price">15500 P.</p>
 					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -298,14 +270,7 @@
 						<p class="product-item-price-old">30500 P.</p>
 						<p class="product-item-price">25500 P.</p>
 					</div>
-
-					<div class="product-item-price-new visually-hidden">
-						<img src="img/content-img/new-flag.png" width="60" height="59" alt="Новинка">
-					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -326,8 +291,6 @@
 						<p class="product-item-price">12500 P.</p>
 					</div>
 				</li>
-			</ul>
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -349,13 +312,7 @@
 						<p class="product-item-price">15500 P.</p>
 					</div>
 
-					<div class="product-item-price-new visually-hidden">
-						<img src="img/content-img/new-flag.png" width="60" height="59" alt="Новинка">
-					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -377,9 +334,6 @@
 						<p class="product-item-price">25500 P.</p>
 					</div>
 				</li>
-			</ul>
-
-			<ul class="product-list">
 				<li class="product-item">
 					<div class="product-img-wrapper">
 						<a href="#">
@@ -424,16 +378,7 @@
 			</p>
 		</section>
 
-		<section class="added-cart">
-			<h2>Товар добавлен в корзину</h2>
-			<a class="place-your-order" href="#">Оформить заказ</a>
-			<button class="continue shopping" type="button">
-				Продолжить покупки
-			</button> 
-			<button class="modal-close" type="button">
-          		<span class="visually-hidden">Закрыть</span>
-        	</button>
-		</section>
+		
 
 	</main>
 		
@@ -471,7 +416,7 @@
 				<p>г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
 				<a class="footer-phone" href="tel:78125550555">+7 (812) 555-05-55</a>
 			</div>
-			<nav>
+			<div>
 				<ul class="catalog-list">
 					<li class="catalog-item">
 						<a href="#">Материалы</a>
@@ -486,7 +431,7 @@
 						<a href="#">Спецпредложения</a>
 					</li>
 				</ul>
-			</nav>
+			</div>
 		</section>
 
 		<section class="footer-bottom">
@@ -498,13 +443,19 @@
 			<div class="fotter-social">
 				<ul>
 					<li class="fotter-social-item">
-						<a class="social-button social-button-vk" href="https://vk.com/htmlacademy">Вконтакте</a>
+						<a class="social-button social-button-vk" href="https://vk.com/htmlacademy">
+							<span class="visually-hidden">Вконтакте</span>
+						</a>
 					</li>
 					<li class="fotter-social-item">
-						<a class="social-button social-button-fb" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+						<a class="social-button social-button-fb" href="https://www.facebook.com/htmlacademy">
+							<span class="visually-hidden">Фейсбук</span>
+						</a>
 					</li>
 					<li class="fotter-social-item">
-						<a class="social-button social-button-instagram" href="https://www.instagram.com/htmlacademy/">Инстаграм</a>
+						<a class="social-button social-button-instagram" href="https://www.instagram.com/htmlacademy/">
+							<span class="visually-hidden">Инстаграм</span>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -518,6 +469,17 @@
 			</div>
 		</section>
 	</footer>
+
+	<section class="modal-added-cart">
+			<h2>Товар добавлен в корзину</h2>
+			<a class="place-your-order" href="#">Оформить заказ</a>
+			<button class="continue shopping" type="button">
+				Продолжить покупки
+			</button> 
+			<button class="modal-close" type="button">
+          		<span class="visually-hidden">Закрыть</span>
+        	</button>
+	</section>
   </body>
 </html>
 
