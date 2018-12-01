@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="header-middle">
-			<p class="main-title">
+			<p class="main-title-catalog">
 				Интернет-магазин строительных материалов и инструментов для ремонта
 			</p>
 			<div class="header-contact">
@@ -115,31 +115,31 @@
 					<legend>Производители</legend>
 					<ul>
 						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="BOSCH" id="BOSCH-field" area-label="BOSCH" checked>
+							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="BOSCH" id="BOSCH-field" checked>
 							<label for="BOSCH-field">
 								Bosch
 							</label>
 						</li>
 						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="interskol" id="interskol-field" area-label="Интерскол">
+							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="interskol" id="interskol-field">
 							<label for="interskol-field">
 								Интерскол
 							</label>
 						</li>
 						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Makita" id="Makita-field" area-label="Makita" checked>
+							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Makita" id="Makita-field" checked>
 							<label for="Makita-field">
 								Makita
 							</label>
 						</li>
 						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Dewalt" id="Dewalt-field" area-label="Dewalt">
+							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Dewalt" id="Dewalt-field">
 							<label for="Dewalt-field">
 								Dewalt
 							</label>
 						</li>
 						<li class="developers-option">
-							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Hitachi" id="Hitachi-field" area-label="Hitachi">
+							<input class="visually-hidden developers-input developers-input-chekbox" type="checkbox" name="Hitachi" id="Hitachi-field">
 							<label for="Hitachi-field">
 								Hitachi
 							</label>
@@ -150,20 +150,20 @@
 					<legend>Питание</legend>
 						<ul>
 							<li class="developers-option">
-								<input class="visually-hidden developers-input developers-input-radio" type="radio" name="food-group" value="accumulator" area-label="Аккумуляторные" id="accumulator-group" checked>
+								<input class="visually-hidden developers-input developers-input-radio" type="radio" name="food-group" value="accumulator" id="accumulator-group" checked>
 								<label for="accumulator-group">
 									Аккумуляторные	
 								</label>
 							</li>
 							<li class="developers-option">
-								<input class="visually-hidden developers-input developers-input-radio" type="radio" name="food-group" value="networking" area-label="Сетевые" id="network-group">
+								<input class="visually-hidden developers-input developers-input-radio" type="radio" name="food-group" value="networking" id="network-group">
 								<label for="network-group">
 									Сетевые
 								</label>
 							</li>
 						</ul>
 				</fieldset>
-				<button type="submit" class="filter-button button">
+				<button type="submit" class="button filter-button">
 					Показать
 				</button>	
 			</form>
@@ -355,7 +355,7 @@
 			</ul>
 			<ul class="pagination-list">
 				<li class="pagination-item">
-					<a>1</a>
+					<a class="pagination-item-first" href="#">1</a>
 				</li>
 				<li class="pagination-item">
 					<a href="#">2</a>
@@ -464,14 +464,16 @@
 	</footer>
 
 	<section class="modal modal-added-cart">
-			<h2>Товар добавлен в корзину</h2>
-			<a class="place-your-order" href="#">Оформить заказ</a>
-			<button class="continue-shopping" type="button">
-				Продолжить покупки
-			</button> 
-			<button class="modal-close" type="button">
-          		<span class="visually-hidden">Закрыть</span>
-        	</button>
+			<h2>Товар добавлен в корзину!</h2>
+				<div class="button-modal">
+					<a class="button place-your-order" href="#">Оформить заказ</a>
+					<button class="button continue-shopping" type="button">
+						Продолжить покупки
+					</button> 
+				</div>
+				<button class="modal-close" type="button">
+          			<span class="visually-hidden">Закрыть</span>
+        		</button>
 	</section>
 
   </body>

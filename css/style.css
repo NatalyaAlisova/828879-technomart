@@ -48,7 +48,8 @@ a {
   background-color: #f3f7f9;
 }
 
-.header-middle h1 {
+.header-middle h1,
+.main-title-catalog {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -76,6 +77,24 @@ a {
   color: #000000;
 
   background-color: #ffffff;
+}
+
+.nav-user-item a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+
+  text-decoration: underline;
+}
+
+.breadcrumbs-item a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38px;
+  font-weight: normal;
+  color: #000000;
+
+  text-transform: uppercase;
 }
 
 .user-nav-list:hover,
@@ -247,5 +266,142 @@ h2 {
   border: inside 2px #dee3e4;
 }
 
+/*catalog.html*/
+
+.main-title {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+
+  text-transform: uppercase;
+
+  background-color: #f2f6f8;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.filters ul {
+  list-style: none;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter-button {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.38;
+  text-align: center;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+}
+
+.product-item {
+  border: solid 1px #e5e5e5;
+
+}
+
+.product-item:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.product-info h3 {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11;
+  color: #000000;
+}
+
+.product-item-price-old {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.06;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.product-item-price {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.06;
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+/*.pagination-list .pagination-item .pagination-item-first a {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.38px;
+  color: #ffffff;
+
+  background-color: #ee3643;
+
+} не получается подключить красный квадрат с цифрой 1*/
+
+.pagination-item+li a {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.38px;
+  color: #000000;
+
+  border: solid 1px #e5e5e5;
+}
+
+.about-item {
+  background-color: #f4f7f9;
+}
+
+.about-item h2 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #000000;
+}
+
+.about-item-text {
+  font-family: PTSans, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #000000;
+}
 
 
+.modal-added-cart h2 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #000000;
+
+  text-transform: none;
+}
+
+.continue-shopping {
+
+  color: #000000;
+  background-color: #ffffff;
+
+}
+
+.button-modal {
+  background-color: #f4f7f9;
+}
