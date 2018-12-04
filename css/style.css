@@ -15,6 +15,14 @@ a {
   color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+ }
+
 .main-header-logo {
   font-size: 24px;
   line-height: 24px;
@@ -31,6 +39,7 @@ a {
 }
 
 .header-top {
+
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -107,16 +116,19 @@ a {
   background-color: #161d29;
 }
 
-.form-search:focuse {
+.form-search:focus {
   background-color: #ffffff;
 }
-/*.user-nav,
+.user-nav,
 .main-nav-list,
 .info-partners-list,
 .footer-navigation-list,
 .catalog-list,
-.fotter-social-list*/ 
-ul {
+.fotter-social-list,
+.user-nav-list,
+.breadcrumbs,
+.product-list,
+.pagination-list {
   list-style: none;
 }
 
@@ -128,6 +140,8 @@ ul {
 
   background-color: #32425c;
 }
+
+
 
 .main-nav-item a:hover {
   background-color: #293449;
@@ -184,7 +198,7 @@ h2 {
   border: none;
 }
 
-.main-footer-logo {
+.footer-logo {
   font-size: 30px;
   line-height: 30px;
   color: #ffffff;
@@ -268,6 +282,10 @@ h2 {
 
 /*catalog.html*/
 
+.cart-with-items {
+  background-color: #ee3643;
+}
+
 .main-title {
   font-size: 30px;
   line-height: 30px;
@@ -307,6 +325,10 @@ h2 {
 
   background-color: #ffffff;
   border: solid 1px #e5e5e5;
+}
+
+.cart-with-items {
+
 }
 
 .product-item {
@@ -404,4 +426,9 @@ h2 {
 
 .button-modal {
   background-color: #f4f7f9;
+}
+
+.product-img-wrapper:hover .product-hidden {
+  display: none;
+
 }
