@@ -4,15 +4,18 @@ body {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  font-weight: 700;
+  
   color: #000000;
+  font-weight: normal;
     
   background-color: #ffffff;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -23,23 +26,108 @@ a {
   margin: -1px;
  }
 
+.conteiner {
+  width: 960px;
+  /*height: 43px;*/
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header {
+  height: 320px;
+  background-color: #f3f7f9;
+}
+    
+
 .main-header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 47px;
   font-size: 24px;
   line-height: 24px;
   color: #ffffff;
   text-align: center;
-
+  font-weight: normal;
+  text-transform: uppercase;
+  
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
 }
 
-.form-search input {
+.header-top-wrapper {
+  display: flex;
+
+  justify-content: space-between;
+  height: 43px;
+  box-sizing: border-box;
+}
+
+.form-search {
+  display: flex;
+  width: 260px;
+}
+
+.form-search-button {
+  display: flex;
+  align-items: center;
+
+  background-color: unset;
   border: none;
-  background-color: #293449;
+   
+}
+
+input::-webkit-input-placeholder { color: #fff; }
+input:-ms-input-placeholder { color: #fff; }
+input::-ms-input-placeholder { color: #fff; }
+input::placeholder { color: #fff; } 
+
+.form-search-button svg {
+  padding: 12px;
+  fill: #6a7180;
+}
+
+.bookmark-header,
+.cart svg {
+  fill: #6a7180;
+}
+
+.order-button {
+  width: 150px;
+  text-align: center;
+}
+.bookmark-header,
+.cart {
+  width: 160px;
+  text-align: center;
+
+}
+
+.cart:before {
+  content: ' ';
+  display: inline-block;
+  background-image: url('../img/svg/icon-cart.svg');
+  width: 15px;   
+  height: 15px;
+  
+}
+
+.user-nav-list {
+  display: flex;
+  justify-content: inherit;
+  width: 720px;
+  margin-right: auto;
+  
+}
+
+.user-nav-list a {
+  padding: 10px;
 }
 
 .header-top {
-
+  
+  
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -47,8 +135,24 @@ a {
   background-color: #293449;
 }
 
+.main-nav-list {
+  margin: 0px;
+  padding: 0px;
+}
+
+.form-search input {
+  border: none;
+  background-color: #293449;
+}
+
+/*.bookmark-header,
+.cart-with-items,
+.order-button*/
+
+
 .order-button {
   background-color: #5fbb2d;
+  
 }
 
 
@@ -57,8 +161,78 @@ a {
   background-color: #f3f7f9;
 }
 
+.header-middle {
+  display: flex;
+
+  padding-top: 45px;
+  padding-bottom: 18px;
+
+}
+
+.header-middle-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.header-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.header-middle h1 {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+  width: 196px;
+  margin-left: 53px;
+  }
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.user-nav-item:first-child {
+  width: 100px;
+  height: 25px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.user-nav-item:last-child {
+  width: 130px;
+  height: 25px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.main-nav-list {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 940px;
+  height: 60px;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  
+}
+
 .header-middle h1,
 .main-title-catalog {
+
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -66,6 +240,11 @@ a {
 }
 
 .header-phone {
+  width: 270px;
+  height: 45px;
+  text-align: center;
+  padding: 10px;
+  margin-right: 70px;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -74,9 +253,15 @@ a {
 }
 
 .address {
+  width: 270px;
+  margin-top: 6px;
+
+  text-align: center;
   font-size: 14px;
   line-height: 24px;
+
   color: #32425c;
+
 }
 
 .user-nav-item a {
@@ -95,6 +280,136 @@ a {
 
   text-decoration: underline;
 }
+
+/*временное свойство*/
+.center {
+
+  height: 2050px;
+}
+
+.info-contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 480px;
+}
+
+.info {
+  width: 570px;
+  height: 293px;
+}
+
+.info-partners-list {
+  margin: 0;
+  padding: 0;
+}
+
+.button-about-company {
+  width: 220px;
+  height: 38px;
+  padding: 7px;
+
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  background-color: #ee3643;
+}
+
+.contact {
+  width: 300px;
+}
+
+.button-write {
+  
+  width: 300px;
+  height: 38px;
+  padding: 7px;
+  margin-top: 33px;
+
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  background-color: #ee3643;
+}
+
+.header-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 68px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
+}
+
+.footer-top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 570px;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.footer-contatcs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 49px;
+}
+
+.catalog-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 550px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contatcs p {
+  margin-bottom: 0;
+  margin-top: 28px;
+}
+
+.footer-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 106px;
+}
+
+.fotter-social-list {
+  
+}
+
+
 
 .breadcrumbs-item a {
   font-family: "PT Sans", Arial, sans-serif;
@@ -170,6 +485,10 @@ h2 {
   font-size: 13px;
   line-height: 24px;
   color: #000000;
+}
+
+.contact-office {
+  margin-bottom: 31px;
 }
 
 .info-partners-item a {
