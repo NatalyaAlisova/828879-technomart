@@ -248,7 +248,7 @@ input::placeholder { padding-right: 10px; }
   background-image: url('../img/svg/icon-phone.svg');
   width: 25px;   
   height: 20px;
-  left: 622px;
+  left: 12px;
   background-repeat: no-repeat;
 }
 
@@ -304,6 +304,7 @@ input::placeholder { padding-right: 10px; }
 }
 
 .header-phone {
+  position: relative;
   width: 270px;
   height: 45px;
   padding: 10px;
