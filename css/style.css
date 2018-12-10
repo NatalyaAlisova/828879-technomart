@@ -87,7 +87,7 @@ input[type="radio"].visually-hidden {
 .form-search-button {
   display: flex;
   align-items: center;
-
+  padding-right: 0px;
   background-color: unset;
   border: none;
    
@@ -97,13 +97,13 @@ input::-webkit-input-placeholder { color: #fff; }
 input:-ms-input-placeholder { color: #fff; }
 input::-ms-input-placeholder { color: #fff; }
 input::placeholder { color: #fff; } 
-
+input::placeholder { padding-right: 10px; }
 .form-search-button svg {
   padding: 12px;
   fill: #6a7180;
 }
 
-.bookmark-header,
+.bookmark svg,
 .cart svg {
   fill: #6a7180;
 }
@@ -117,7 +117,8 @@ input::placeholder { color: #fff; }
 }
 
 .user-nav-item .entry-link:hover,
-.user-nav-item .entry-link svg:hover {
+.user-nav-item .entry-link:hover svg {
+
   color: #ef3743;
   fill: #32425b;
 }
@@ -127,25 +128,40 @@ input::placeholder { color: #fff; }
   width: 150px;
   text-align: center;
 }
-.bookmark-header,
+.bookmark,
 .cart {
+  display: flex;
+  align-items: center;
+  
   width: 160px;
   text-align: center;
 
 }
 
-.cart {
-  
+.bookmark svg {
+  margin-left: 31px;
+  margin-right: 13px;
 }
 
-.cart:before {
+.bookmark-counter,
+.cart-counter {
+  padding-left: 5px;
+}
+
+ 
+.cart svg {
+  margin-right: 17px;
+  margin-left: 24px;
+}
+
+/*.cart:before {
   content: ' ';
   display: inline-block;
   background-image: url('../img/svg/icon-cart.svg');
   width: 15px;   
   height: 15px;
   
-}
+}*/
 
 .user-nav,
 .main-nav-list {
@@ -173,16 +189,16 @@ input::placeholder { color: #fff; }
 
 .user-nav-list {
   display: flex;
-  justify-content: inherit;
+  
   width: 720px;
   margin-right: auto;
   
 }
 
-.user-nav-list a {
+/*.user-nav-list a {
   display: block;
   padding: 10px;
-}
+}*/
 
 .header-top {
   font-size: 17px;
@@ -203,6 +219,7 @@ input::placeholder { color: #fff; }
 
 
 .order-button {
+  padding: 13px;
   background-color: #5fbb2d;
   
 }
@@ -297,7 +314,7 @@ input::placeholder { color: #fff; }
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  width: 940px;
+  
   /*height: 60px;*/
   box-shadow: inset 0px -5px 0 0 #293449;
   
@@ -526,7 +543,7 @@ input::placeholder { color: #fff; }
   background-color: #212a3a;
 }
 
-.bookmark-header:active,
+.bookmark:active,
 .basket:active {
   background-color: #161d29;
 }
@@ -552,7 +569,7 @@ input::placeholder { color: #fff; }
   line-height: 17px;
   color: #ffffff;
   box-shadow: inset 0px -5px 0 0 #293449;
-
+  width: 100%;
   background-color: #32425c;
 }
 
@@ -580,7 +597,7 @@ h2 {
 }
 
 .info-text,
-.contact-office {
+.contact-text {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
