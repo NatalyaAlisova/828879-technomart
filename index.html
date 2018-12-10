@@ -58,10 +58,16 @@
 				</div>
 				<ul class="user-nav">
 					<li class="user-nav-item">
-						<a href="#">Войти</a>
+						<a class="entry-link" href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+					    <path d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+					    <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+						</svg>
+							Войти
+						</a>
 					</li>
 					<li class="user-nav-item">
-						<a href="#">Регистрация</a>
+						<a class="check-in-link" href="#">Регистрация</a>
 					</li>
 				</ul>
 			</div>
@@ -92,6 +98,7 @@
 						<li class="main-nav-item">
 							<a href="#">Контакты</a>
 						</li>
+
 					</ul>
 				</nav>
 			</div>
@@ -243,28 +250,30 @@
 
 	<section class="modal modal-search">
 			<h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
-			<form class="modal-search-form" action="?" method="post">
-				<div class="modal-search-item">
-					<label for="name">Ваше имя:</label>
-					<input type="text" id="name" name="Имя" placeholder="Имя Фамилия" required>
-				</div>
-				<div class="modal-search-item">			
-					<label for="email">Ваш email:</label>
-					<input type="email" id="email" name="Эл.адрес" placeholder="email@examble.com" required>
-				</div>
-				<div class="modal-search-item">
-					<label for="comment-field">Текст письма:</label>
-					<textarea id="comment-field" name="Доп.комментарий" placeholder="В свободной форме" required></textarea>
-				</div>
-				<div>
-					<button class="button button-send" type="submit">
-						Отправить
-					</button>
-				</div>
-			</form>
-			<button class="modal-close" type="button">
-          		<span class="visually-hidden">Закрыть</span>
-        	</button>
+			<div class="modal-wrapper">
+				<form class="modal-search-form" action="?" method="post">
+					<div class="modal-search-item">
+						<label for="name">Ваше имя:</label>
+						<input type="text" id="name" name="Имя" placeholder="Имя Фамилия" required>
+					</div>
+					<div class="modal-search-item">			
+						<label for="email">Ваш email:</label>
+						<input type="email" id="email" name="Эл.адрес" placeholder="email@examble.com" required>
+					</div>
+					<div class="modal-search-item">
+						<label for="comment-field">Текст письма:</label>
+						<textarea id="comment-field" name="Доп.комментарий" placeholder="В свободной форме" required></textarea>
+					</div>
+					<div>
+						<button class="button button-send" type="submit">
+							Отправить
+						</button>
+					</div>
+				</form>
+				<button class="modal-close" type="button">
+	          		<span class="visually-hidden">Закрыть</span>
+	        	</button>
+	        </div>
 	</section>
 
   </body>
