@@ -601,7 +601,8 @@ input::placeholder { padding-right: 10px; }
 
 
 
-.breadcrumbs-item a {
+.breadcrumbs-item a,
+.breadcrumbs-item-end a {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38px;
@@ -610,6 +611,8 @@ input::placeholder { padding-right: 10px; }
 
   text-transform: uppercase;
 }
+
+
 
 .user-nav-list:hover {
   background-color: #212a3a;
@@ -951,6 +954,14 @@ h2 {
   fill: #c1c6ce;
 }
 
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item-end::after {
+  display: none;
+}
+
 .main-title {
   margin: 0;
   padding: 28px 29px;
@@ -970,7 +981,7 @@ h2 {
   
   width: 185px;
   
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1.38;
@@ -988,7 +999,7 @@ h2 {
 
 .filter-item legend,
 .filter-developers-option legend {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.76px;
   font-weight: bold;
@@ -1057,7 +1068,7 @@ h2 {
 }
 
 .price-controls input {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   text-align: center;
   font-weight: normal;
@@ -1094,14 +1105,25 @@ h2 {
 .hr {
   width: 100%;
   height: 1px;
-  margin-top: 26px;
-  margin-bottom: 16px;
-
+  margin-top: 24px;
+  
   background-color: #e5e5e5;
 }
 
+.filters {
+  width: 220px;
+}
+
 .filters fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+
   border: none;
+}
+
+.filter-developers-option legend { 
+  margin-bottom: 13px;
 }
 
 .filters legend { 
@@ -1111,7 +1133,13 @@ h2 {
   color: #000000;
 }
 
+.filter fieldset:first-child {
+  margin-bottom: 35px;
+}
+
 .filters ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
@@ -1119,8 +1147,92 @@ h2 {
   line-height: 20px;
 }
 
+.developers-option {
+  margin-bottom: 20px;
+  padding-left: 35px;
+
+  
+}
+
+.developers-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.developers-input-chekbox + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+
+  width: 18px;
+  height: 19px;
+
+  border: 2px solid #c5c5c5;
+  border-radius: 3px;
+}
+
+.developers-input-chekbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -36px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url('../img/svg/checkbox-on.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.developers-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -34px;
+  top: -1px;
+
+  width: 16px;
+  height: 16px;
+  
+  border: 4px solid #c5c5c5;
+  border-radius: 50%;
+}
+
+.developers-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: -26px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #c5c5c5;
+  border-radius: 50%;
+}
+
+.developers-option {
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 .filter-button {
-  font-family: PTSans, Arial, sans-serif;
+  padding: 10px 38px;
+  margin-top: 42px;
+
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1.38;
@@ -1131,13 +1243,106 @@ h2 {
   border: solid 1px #e5e5e5;
 }
 
-.cart-with-items {
+.catalog {
+  margin-left: 21px;
+}
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter {
+  position: relative;
+  display: flex;
+  background-color: #f7f3ec;
+  width: 685px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 25px;
+  padding: 7px;
+  border-radius: 2px;
+}
+
+.sorting-filter {
+  
+  display: flex;
+  justify-content: space-between;
+  width: 355px;
+}
+
+.catalog-filter legend {
+  width: 221px;
+  margin-left: 10px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.sorting-filter a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+ 
+  text-transform: uppercase;
+}
+
+.sorting-filter-price {
+  color: #ee3643;
+}
+
+.sorting-filter-type,
+.sorting-filter-function {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #acaaa5;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.paginator-filter .up {
+  position: absolute;
+  padding: 10px;
+  top: -2px;
+  right: 40px;
+}
+
+.paginator-filter .down {
+  position: absolute;
+  padding: 10px;
+  top: -2px;
+  right: 7px;
+}
+
+.paginator-filter .up svg {
+  fill: #ee3643;
+}
+
+.paginator-filter .down svg {
+  fill: #c5c5c5;
+}
+
+.product-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .product-item {
+  width: 217px;
   border: solid 1px #e5e5e5;
+  margin-bottom: 20px;
+  margin-right: 20px;
 
+}
+
+.product-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .product-item:hover {
@@ -1145,7 +1350,7 @@ h2 {
 }
 
 .product-info h3 {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.11;
@@ -1153,7 +1358,7 @@ h2 {
 }
 
 .product-item-price-old {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.06;
@@ -1162,7 +1367,7 @@ h2 {
 }
 
 .product-item-price {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.06;
@@ -1183,7 +1388,7 @@ h2 {
 } не получается подключить красный квадрат с цифрой 1*/
 
 .pagination-item+li a {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1.38px;
@@ -1204,7 +1409,7 @@ h2 {
 }
 
 .about-item-text {
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 24px;
