@@ -486,29 +486,14 @@ input::placeholder { padding-right: 10px; }
 }
 
 .footer-navigation-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin: 0;
-    margin-left: 133px;
-    min-height: 64px;
-}
-    
-    
-
-/*  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-  flex-direction: row;
-  align-items: flex-end;
-  width: 570px;
+  display: flex;
   justify-content: space-between;
-  height: 68px;
+  align-items: flex-end;
+  margin: 0;
+  margin-left: 133px;
+  min-height: 64px;
 }
-*/
-
-
+    
 .footer-contatcs-wrapper {
   display: flex;
   justify-content: space-between;
@@ -521,10 +506,8 @@ input::placeholder { padding-right: 10px; }
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  width: 540px;
-  height: 52px;
-  margin: 0;
-  padding: 0;
+  width: 524px;
+  margin-top: 28px;
 }
 
 .footer-contatcs p {
@@ -533,8 +516,8 @@ input::placeholder { padding-right: 10px; }
 }
 
 .reserved {
-  margin-top: 39px;
-  margin-bottom: 0;
+  margin-right: 163px;
+  margin-top: 37px;
 }
 
 .reserved p {
@@ -556,7 +539,7 @@ input::placeholder { padding-right: 10px; }
 }
 
 .footer-social {
-  margin-left: 73px;
+  margin-right: 120px;
   margin-top: 37px;
 }
 
@@ -572,7 +555,6 @@ input::placeholder { padding-right: 10px; }
 }
 
 .footer-social-item {
-  margin: auto;
   border-radius: 50%;
   overflow: hidden;
   background-color: #222b3a;
@@ -581,13 +563,7 @@ input::placeholder { padding-right: 10px; }
 
 .footer-bottom-wrapper {
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  height: 106px;
-}
-
-
-
+  padding-bottom: 28px;
 }
 
 .modal-wrapper {
@@ -786,7 +762,7 @@ h2 {
 }
 
 .footer-contatcs {
-    margin-left: 2px;
+    margin-left: 4px;
 }
 
 .footer-contatcs,
@@ -797,7 +773,6 @@ h2 {
 }
 
 .catalog-item a {
-  padding-left: 16px;
   font-size: 18px;
   line-height: 24px;
   color: #ffd180;
@@ -821,6 +796,21 @@ h2 {
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
+}
+
+.footer-feedback p,
+.footer-developing p {
+  margin: 0;
+  
+}
+
+.footer-feedback,
+.footer-developing {
+  margin-top: 37px;
+}
+
+.footer-feedback {
+  margin-right: 52px;
 }
 
 .footer-feedback a,
