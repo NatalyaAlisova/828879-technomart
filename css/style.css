@@ -1136,6 +1136,7 @@ h2 {
 }
 
 .max-price {
+  position: relative;
   margin-left: 32px;
 }
     
@@ -1148,8 +1149,8 @@ h2 {
   background-color: #444444;
   vertical-align: middle;
   text-align: center;
-  left: 467px;
-  top: 690px;
+  left: -18px;
+  top: 18px;
 }
 
 .hr {
