@@ -85,10 +85,16 @@ input[type="radio"].visually-hidden {
   width: 260px;
 }
 
+input[name="search"] {
+  order: 2;
+  width: calc(100% - 43px);
+  outline: none;
+}
+
 .form-search-button {
   display: flex;
   align-items: center;
-  padding-right: 0px;
+  padding: 0px;
 
   background-color: unset;
   border: none;
@@ -101,13 +107,60 @@ input::placeholder { color: #fff; }
 input::placeholder { padding-right: 10px; }
 
 .form-search-button svg {
-  padding: 12px;
+  padding: 13px;
   fill: #6a7180;
+  padding-left: 18px;
+  outline: none;
+}
+
+.form-search:hover button svg,
+.bookmark:hover svg,
+.cart:hover svg {
+  fill: #ffffff;
+}
+
+input[name="search"]:hover {
+  background-color: #212a3a;
+  outline: none;
+  border: none;
+}
+
+.form-search:hover input,
+.form-search:hover .form-search-button,
+.bookmark:hover,
+.cart:hover {
+  background-color: #212a3a;
+}
+
+input[name="search"]:focus {
+  background-color: #fff;
+  color: black;
+  
+/*   i'm not sure for these two rules , but  */
+  outline: none;
+  border: none;
+}
+
+input[name="search"]:focus + button {
+  color: #ffffff;
+}
+
+input[name="search"]:focus + button svg {
+  fill: red;
+  background-color: #ffffff;
 }
 
 .bookmark svg,
 .cart svg {
   fill: #6a7180;
+}
+
+.form-search:focus {
+  color: #ffffff;
+}
+
+.form-search:focus svg {
+  fill: #ee3643;
 }
 
 .entry-link svg {
@@ -137,9 +190,17 @@ input::placeholder { padding-right: 10px; }
   text-align: center;
 }
 
+.bookmark {
+  padding-left: 4px;
+}
+
+.cart {
+  padding-left: 7px;
+}
+
 .bookmark svg {
-  margin-left: 31px;
-  margin-right: 13px;
+  margin-left: 28px;
+  margin-right: 12px;
 }
 
 .bookmark-counter,
@@ -149,7 +210,7 @@ input::placeholder { padding-right: 10px; }
  
 .cart svg {
   margin-right: 17px;
-  margin-left: 24px;
+  margin-left: 17px;
 }
 
 .user-nav,
@@ -566,33 +627,6 @@ input::placeholder { padding-right: 10px; }
   padding-bottom: 28px;
 }
 
-.modal-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 620px;
-  height: 430px;
-  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-  margin: 0 auto;
-}
-
-.modal-search-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 620px;
-  height: 312px;
-}
-
-
-
-
-
-
 
 .breadcrumbs-item a,
 .breadcrumbs-item-end a {
@@ -605,43 +639,6 @@ input::placeholder { padding-right: 10px; }
   text-transform: uppercase;
 }
 
-
-
-.user-nav-list:hover {
-  background-color: #212a3a;
-}
-
-.user-nav-list:active {
-  color: rgba(255, 255, 255, 0.5);
-  background-color: #1d2739;
-}
-
-.form-search:hover,
-.form-search-button:hover,
-.bookmark:hover,
-.cart-counter:hover,
-.form-search-button input:hover,
-.form-search-button:hover svg,
-.bookmark:hover svg,
-.cart:hover svg {
-
-  background-color: #212a3a;
-  fill: #ffffff;
-}
-
-
-
-  
-} 
-
-.bookmark:active,
-.basket:active {
-  background-color: #161d29;
-}
-
-.form-search:focus {
-  background-color: #ffffff;
-}
 .user-nav,
 .main-nav-list,
 .info-partners-list,
@@ -820,17 +817,19 @@ h2 {
   color: #ffd180;
 }
 
-.footer-navigation-item:hover,
-.catalog-item:hover {
+.footer-navigation-item a:hover,
+.catalog-item a:hover {
   text-decoration: underline;
 }
 
-.footer-navigation-list:active {
+.footer-navigation-item a:active {
   color: rgba(241, 245, 247, 0.5);
+  text-decoration: none;
 }
 
-.catalog-list:active {
+.catalog-item a:active {
   color: rgba(255, 209, 128, 0.5);
+  text-decoration: none;
 }
 
 .footer-feedback a:hover,
@@ -848,10 +847,8 @@ h2 {
   display: none;
 }
 
-.modal-search {
-
-  display: none;
-
+.modal {
+ 
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   background-color: #ffffff;
 }
@@ -864,11 +861,36 @@ h2 {
   border: inside 2px #dee3e4;
 }
 
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 620px;
+  height: 430px;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+}
+
+.modal-search-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 620px;
+  height: 312px;
+}
+
+
 /*catalogg.html*/
 
 
 
 .cart-with-items {
+  width: 150px;
+  padding-left: 0px;
   background-color: #ee3643;
 }
 
