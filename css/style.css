@@ -1371,21 +1371,21 @@ h2 {
 .paginator-filter .up,
 .paginator-filter .down {
   position: absolute;
-  padding: 14px;
+  padding: 10px;
   border: none;
   background-color: #f7f3ec;
   cursor: pointer;
 }
 
 .paginator-filter .up {
-  top: -2px;
-  right: 34px;
+  top: 2px;
+  right: 38px;
   
 }
 
 .paginator-filter .down {
-  top: -2px;
-  right: 2px;
+  top: 2px;
+  right: 6px;
 }
 
 .paginator-filter .up svg {
