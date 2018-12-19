@@ -848,46 +848,6 @@ h2 {
   text-decoration: none;
 }
 
-.hidden {
-  display: none;
-}
-
-.modal {
-  position: fixed;
- 
-  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-  background-color: #ffffff;
-}
-
-.modal-form-item input {
-  font: inherit;
-  font-size: 13px;
-  line-height: 17.5px;
-  color: #000000;
-  border: inside 2px #dee3e4;
-}
-
-.modal-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 620px;
-  height: 430px;
-  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-  margin: 0 auto;
-}
-
-.modal-search-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 620px;
-  height: 312px;
-}
 
 
 /*catalogg.html*/
@@ -1696,15 +1656,65 @@ h2 {
   
 }
 
+
+.modal {
+  position: fixed;
+ 
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  background-color: #ffffff;
+}
+
+.modal-form-item input {
+  font: inherit;
+  font-size: 13px;
+  line-height: 17.5px;
+  color: #000000;
+  border: inside 2px #dee3e4;
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 620px;
+  height: 430px;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+}
+
+.modal-search-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 620px;
+  height: 312px;
+}
+
+.modal-map {
+  top: 50%;
+  left: 50%;
+  width: 940px;
+  height: 448px;
+  transform: translate(-50%, -50%);
+}
+
+.modal-map p {
+  margin: 0px;
+}
+
 .modal-added-cart {
   display: none;
 
   top: 410px;
   left: 50%;
-  margin-left: -310px;
   width: 620px;
   padding-top: 66px;
   border-top: 7px solid #ee3643;
+  transform: translate(-50%, -50%);
 }
 
 .modal-added-cart h2 {
@@ -1776,20 +1786,10 @@ h2 {
   transform: rotate(-45deg);
 }
 
-.place-your-order,
 .continue-shopping {
-
-
-}
-
-.continue-shopping {
-
   color: #000000;
   background-color: #ffffff;
-
 }
-
-
 
 .product-img-wrapper:hover .product-hidden {
   display: none;
