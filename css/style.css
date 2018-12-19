@@ -751,6 +751,7 @@ h2 {
 
   background-color: #ee3643;
   border: none;
+  cursor: pointer;
 }
 
 .footer-logo {
@@ -1696,31 +1697,45 @@ h2 {
 }
 
 .modal-added-cart {
-
   display: none;
-  
+
   top: 410px;
   left: 50%;
   margin-left: -310px;
-  width: 460px;
-  padding: 66px 80px 40px 80px;
+  width: 620px;
+  padding-top: 66px;
   border-top: 7px solid #ee3643;
 }
 
 .modal-added-cart h2 {
   margin: 0;
-  margin-left: 100px;
+  margin-bottom: 68px;
+  margin-left: 180px;
   font-size: 30px;
   font-weight: normal;
   line-height: 30px;
   color: #000000;
-
   text-transform: none;
 }
 
 .modal-added-cart svg {
   position: absolute;
   top: 49px;
+  left: 81px;
+}
+
+.button-modal-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 80px;
+  background-color: #f1f1f1;
+}
+
+.button-modal {
+  padding: 6px;
+  border-radius: 3px;
+  max-width: 220px;
+  width: 100%;
 }
 
 .modal-close {
@@ -1774,9 +1789,7 @@ h2 {
 
 }
 
-.button-modal {
-  background-color: #f4f7f9;
-}
+
 
 .product-img-wrapper:hover .product-hidden {
   display: none;
