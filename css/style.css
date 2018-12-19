@@ -100,10 +100,10 @@ input[name="search"] {
   border: none;
 }
 
-input::-webkit-input-placeholder { color: #fff; }
-input:-ms-input-placeholder { color: #fff; }
-input::-ms-input-placeholder { color: #fff; }
-input::placeholder { color: #fff; } 
+input::-webkit-input-placeholder { color: #a9a9a9; }
+input:-ms-input-placeholder { color: #a9a9a9; }
+input::-ms-input-placeholder { color: #a9a9a9; }
+input::placeholder { color: #a9a9a9; } 
 input::placeholder { padding-right: 10px; }
 
 .form-search-button svg {
@@ -1673,28 +1673,115 @@ h2 {
 }
 
 .modal-wrapper {
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 620px;
-  height: 430px;
+  height: 421px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   margin: 0 auto;
 }
 
 .modal-search-form {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 620px;
   height: 312px;
+  margin-top: 46px;
 }
 
+.modal-search {
+  display: none;
+
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  height: 414px;
+  border-top: 7px solid #ee3643;
+  transform: translate(-50%, -50%);
+
+}
+
+.modal-search-name,
+.modal-search-email,
+.modal-search-comment {
+  font-size: 18px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  
+  color: #000000;
+}
+
+.modal-search-form input[type="text"],
+.modal-search-form input[type="email"] {
+  box-sizing: border-box;
+  width: 220px;
+  padding: 6px;
+  padding-right: 40px;
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+}
+
+.modal-search-name {
+  margin-left: 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-search-email {
+  margin-right: 69px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-search-comment {
+  margin-top: 21px;
+  
+}
+
+.modal-search-form label {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.modal-search-comment textarea {
+  width: 450px;
+  height: 105px;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+  
+}
+
+.button-send-wrapper {
+  display: flex;
+  width: 620px;
+  background-color: #f1f1f1;
+  justify-content: center;
+  padding: 34px 82px;
+  margin-top: 36px;
+}
+
+.button-send {
+  padding: 8px;
+  border-radius: 3px;
+  max-width: 460px;
+  width: 100%;
+}
+
+
+
 .modal-map {
+  display: none;
+
   top: 50%;
   left: 50%;
   width: 940px;
