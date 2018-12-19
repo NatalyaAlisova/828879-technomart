@@ -190,10 +190,6 @@ input[name="search"]:focus + button svg {
   text-align: center;
 }
 
-.bookmark {
-  padding-left: 4px;
-}
-
 .cart {
   padding-left: 7px;
 }
@@ -323,6 +319,8 @@ input[name="search"]:focus + button svg {
   
   color: #ee3643;
 }
+
+
 
 .header-contact {
   display: flex;
@@ -649,7 +647,8 @@ input[name="search"]:focus + button svg {
 .breadcrumbs,
 .product-list,
 .pagination-list,
-.profile-block {
+.profile-block,
+.arrows-list {
   list-style: none;
 }
 
@@ -1311,7 +1310,7 @@ h2 {
   width: 685px;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 25px;
+  
   padding: 7px;
   border-radius: 2px;
 }
@@ -1320,18 +1319,32 @@ h2 {
   
   display: flex;
   justify-content: space-between;
-  width: 355px;
+  width: 685px;
 }
 
-.catalog-filter legend {
-  width: 221px;
-  margin-left: 10px;
-
+.catalog-filter h3 {
+  margin: 0;
+  margin-left: 12px;
+  width: 100px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   letter-spacing: normal;
   text-transform: uppercase;
+}
+
+.arrows-list {
+  display: flex;
+  justify-content: space-between;
+  width: 455px;
+  padding: 0;
+  margin: 0;
+}
+
+.arrows-item {
+  margin-left: 3px;
+  margin-right: 34px;
+  
 }
 
 .sorting-filter a {
@@ -1355,18 +1368,24 @@ h2 {
   border-bottom: 1px dotted #ee3643;
 }
 
-.paginator-filter .up {
+.paginator-filter .up,
+.paginator-filter .down {
   position: absolute;
-  padding: 10px;
+  padding: 14px;
+  border: none;
+  background-color: #f7f3ec;
+  cursor: pointer;
+}
+
+.paginator-filter .up {
   top: -2px;
-  right: 40px;
+  right: 34px;
+  
 }
 
 .paginator-filter .down {
-  position: absolute;
-  padding: 10px;
   top: -2px;
-  right: 7px;
+  right: 2px;
 }
 
 .paginator-filter .up svg {
@@ -1376,6 +1395,8 @@ h2 {
 .paginator-filter .down svg {
   fill: #c5c5c5;
 }
+
+
 
 .product-list {
   display: flex;
