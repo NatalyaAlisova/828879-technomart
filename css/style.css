@@ -72,6 +72,15 @@ input[type="radio"].visually-hidden {
   background-color: #ee3643;
 }
 
+.main-header-logo:hover {
+  background-color: #ca2c37;
+}
+
+.main-header-logo:active {
+  background-color: #ba2732;
+}
+
+
 .header-top-wrapper {
   display: flex;
   justify-content: space-between;
@@ -100,10 +109,10 @@ input[name="search"] {
   border: none;
 }
 
-input::-webkit-input-placeholder { color: #a9a9a9; }
-input:-ms-input-placeholder { color: #a9a9a9; }
-input::-ms-input-placeholder { color: #a9a9a9; }
-input::placeholder { color: #a9a9a9; } 
+input::-webkit-input-placeholder { color: #ffffff; }
+input:-ms-input-placeholder { color: #ffffff; }
+input::-ms-input-placeholder { color: #ffffff; }
+input::placeholder { color: #ffffff; } 
 input::placeholder { padding-right: 10px; }
 
 .form-search-button svg {
@@ -132,11 +141,19 @@ input[name="search"]:hover {
   background-color: #212a3a;
 }
 
+.bookmark:active,
+.cart:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
+}
+.bookmark:active svg,
+.cart:active svg {
+  fill: #8b8e94;
+}
+
 input[name="search"]:focus {
   background-color: #fff;
   color: black;
-  
-/*   i'm not sure for these two rules , but  */
   outline: none;
   border: none;
 }
@@ -176,10 +193,31 @@ input[name="search"]:focus + button svg {
   fill: #32425b;
 }
 
-.order-button {
-  width: 150px;
-  text-align: center;
+.user-nav-item .entry-link:active,
+.user-nav-item .check-in-link:active,
+.user-nav-item .entry-link:active svg {
+  color: rgba(0, 0, 0, 0.3);
+  fill: #c5c5c5;
 }
+
+.order-button {
+  padding: 13px;
+  width: 150px;
+
+  text-align: center;
+
+  background-color: #63a63e;
+}
+
+.order-button:hover {
+  background-color: #5fbb2d;
+}
+
+.order-button:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #518534;
+}
+
 
 .bookmark,
 .cart {
@@ -250,11 +288,6 @@ input[name="search"]:focus + button svg {
 .form-search input {
   border: none;
   background-color: #293449;
-}
-
-.order-button {
-  padding: 13px;
-  background-color: #5fbb2d;
 }
 
 .header-middle,
@@ -445,7 +478,16 @@ input[name="search"]:focus + button svg {
   border-radius: 50%;
   margin-left: 11px;
   margin-bottom: 4px;
+}
 
+.nav-user-item:hover a,
+.nav-user-item-end:hover a {
+  color: #ee3643;
+}
+
+.nav-user-item:active a,
+.nav-user-item-end:active a {
+  color: rgba(50, 66, 92, 0.3);
 }
 
 /*временное свойство*/
@@ -854,7 +896,8 @@ h2 {
 
 
 
-.cart-with-items {
+.cart-with-items,
+.cart-with-items:hover {
   width: 150px;
   padding-left: 0px;
   background-color: #ee3643;
@@ -911,6 +954,26 @@ h2 {
   align-items: center;
   padding: 14px;
   background-color: #ffffff;
+}
+
+.profile-logout-item:hover svg {
+  fill: #32425c;
+}
+
+.profile-logout-item:active svg {
+  fill: #c5c5c5;
+}
+
+.profile-link:hover:before {
+  opacity: 1;
+}
+
+.profile-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.profile-link:active:before {
+  opacity: 0.3;
 }
 
 .profile-link {
@@ -1796,10 +1859,12 @@ h2 {
 .modal-added-cart {
   display: none;
 
-  top: 410px;
+  top: 50%;
   left: 50%;
+  z-index: 33;
   width: 620px;
   padding-top: 66px;
+
   border-top: 7px solid #ee3643;
   transform: translate(-50%, -50%);
 }
