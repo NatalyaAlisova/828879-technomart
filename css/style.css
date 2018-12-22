@@ -582,6 +582,14 @@ input[name="search"]:focus + button .form-search-icon {
   background-color: #ee3643;
 }
 
+.footer-logo:hover {
+  background-color: #ca2c37;
+}
+
+.footer-logo:active {
+  background-color: #ba2732;
+}
+
 .footer-top-nav {
   display: flex;
   justify-content: space-between;
@@ -1534,6 +1542,10 @@ h2 {
   margin-right: 12px;
 }
 
+.product-info {
+  margin-bottom: 27px;
+}
+
 .product-info .product-title {
   min-height: 38px;
   padding: 0 25px;
@@ -1543,27 +1555,24 @@ h2 {
 .product-info .product-item-price-old {
   min-height: 18px;
   margin-top: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 19px;
   color: #999;
   text-decoration: line-through;
 }
 
-.product-item .product-item-price {
+.product-info .product-item-price {
   position: relative;
-  width: 80px;
-  margin: 10px auto;
-  margin-bottom: 19px;
-  padding: 10px 30px;
+  padding: 8px 34px;
   color: white;
   background: #ee3643;
   border-radius: 3px;
 }
 
-.product-item .product-item-price:after{
+.product-info .product-item-price:after{
   content: "";
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -27px;
   width: 0;
   height: 0;
   border: 19px solid white;
