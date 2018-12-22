@@ -1922,6 +1922,10 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-added-cart h2 {
   margin: 0;
   margin-bottom: 68px;
