@@ -1780,6 +1780,46 @@ h2 {
   letter-spacing: normal;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
  
@@ -1825,7 +1865,9 @@ h2 {
   width: 620px;
   height: 414px;
   border-top: 7px solid #ee3643;
-  transform: translate(-50%, -50%);
+  /*transform: translate(-50%, -50%);*/
+  margin-left: -310px;
+  margin-top: -207px;
 }
 
 .modal-search-name,
@@ -1894,6 +1936,7 @@ h2 {
   border-radius: 3px;
   max-width: 460px;
   width: 100%;
+  outline: none;
 }
 
 .modal-map {
@@ -1903,7 +1946,9 @@ h2 {
   left: 50%;
   width: 940px;
   height: 448px;
-  transform: translate(-50%, -50%);
+/*  transform: translate(-50%, -50%);*/
+  margin-left: -470px;
+  margin-top: -224px;
 }
 
 .modal-map p {
@@ -1933,6 +1978,12 @@ h2 {
 
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-added-cart h2 {

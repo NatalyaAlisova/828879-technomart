@@ -2,14 +2,14 @@ console.log('файл скриптов подключен');
 
 
 // объявление переменных
-var addToBasketBtns = document.querySelectorAll('.product-hidden .buy');
- 	console.log(addToBasketBtns);
-var popupAddToBasket = document.querySelector('.modal-added-cart');
-var modalCloseBtn = document.querySelector('.modal-close');
-var continueShoppingBtn = document.querySelector('.continue-shopping');
+var addToBasketBtns = document.querySelectorAll('.product-hidden .buy'); //коллекция кнопок "Купить" в карточке товара
+ 	
+var popupAddToBasket = document.querySelector('.modal-added-cart'); //модальное окно с окном "товар добавлен в корзину"
+var modalCloseBtn = document.querySelector('.modal-close'); // закрытие окна (крестик)
+var continueShoppingBtn = document.querySelector('.continue-shopping'); // кнопка "Продолжить покупки"
 
 
-// коллекция кнопок "Купить" в карточке товара
+// вешаем обработчик на все кнопки купить
 for (var i = 0; i < addToBasketBtns.length; i++) {
    		console.log(i);
 		addToBasketBtns[i].addEventListener ("click", function (evt) {
