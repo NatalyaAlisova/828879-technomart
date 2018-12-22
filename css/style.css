@@ -531,6 +531,7 @@ input[name="search"]:focus + button .form-search-icon {
 
 .contact img {
   margin-top: 17px;
+  cursor: pointer;
 }
 
 .button-write {
@@ -1907,6 +1908,14 @@ h2 {
 
 .modal-map p {
   margin: 0px;
+}
+
+.map {
+  width: 960px;
+  height: 446px;
+  background-image: url('../img/content-img/4.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .modal-added-cart {

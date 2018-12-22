@@ -145,6 +145,7 @@
 					Вы можете забрать товар сами, <br>
 					заехав в наш офис:
 				</p>
+
 				<img src="img/content-img/5.jpg" width="300" height="158" alt="Карта проезда">
 				<a class="button button-write" href="#">Заблудились? Напишите нам!</a>
 			</section>
@@ -251,9 +252,9 @@
 
 	<section class="modal modal-map">
 		<h2 class="visually-hidden">Как до нас добраться?</h2>
-		<p>
-      		<img src="img/content-img/4.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-    	</p>
+		<p class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6151239794513!2d30.321427344625533!3d59.93852837898496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1545502135129" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</p>
     	<button class="modal-close" type="button">
       		<span class="visually-hidden">Закрыть</span>
     	</button>
@@ -265,15 +266,15 @@
 			<form class="modal-search-form" action="?" method="post">
 				<div class="modal-search-name">
 					<label for="name">Ваше имя:</label>
-					<input type="text" id="name" name="Имя" placeholder="Имя Фамилия" required>
+					<input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
 				</div>
 				<div class="modal-search-email">			
 					<label for="email">Ваш e-mail:</label>
-					<input type="email" id="email" name="Эл.адрес" placeholder="email@examble.com" required>
+					<input type="email" id="email" name="email" placeholder="email@examble.com" required>
 				</div>
 				<div class="modal-search-comment">
 					<label for="comment-field">Текст письма:</label>
-					<textarea id="comment-field" name="Доп.комментарий" placeholder="В свободной форме" required></textarea>
+					<textarea id="comment-field" name="comment-field" placeholder="В свободной форме" required></textarea>
 				</div>
 				<div class="button-send-wrapper">
 					<button class="button button-send" type="submit">
@@ -286,6 +287,8 @@
         	</button>
         </div>
 	</section>
+
+  <script src="js/script.js"></script>
 
   </body>
 </html>
