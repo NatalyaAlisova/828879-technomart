@@ -1312,7 +1312,8 @@ h2 {
 
 }
 
-.developers-option:hover {
+.developers-input-chekbox:checked:hover + label::after,
+.developers-input-chekbox:hover + label::after {
   opacity: 0.6;
 }
 
@@ -1539,8 +1540,21 @@ h2 {
   text-align: center;
 }
 
-.product-item .flag {
+.product-new:before {
+  content: ' ';
   position: absolute;
+  display: inline-block;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+
+  background: url("../img/content-img/new-flag.png") no-repeat 0 0;
+}
+  /*position: absolute;
   top: -1px;
   right: -1px;
   width: 60px;
@@ -1549,9 +1563,9 @@ h2 {
   overflow: hidden;
   z-index: 20;
 }
-.product-item .flag-new {
+.product-item:before {
     background: url("../img/content-img/new-flag.png") no-repeat 0 0;
-}
+}*/
 
 .product-item .product-img-wrapper {
   width: 218px;
