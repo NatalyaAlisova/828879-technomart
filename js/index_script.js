@@ -1,5 +1,3 @@
-console.log('файл скриптов подключен');
-
 //---------------------------------------
 // Показываем окно с картой
 //---------------------------------------
@@ -25,8 +23,7 @@ mapClose.addEventListener("click", function (evt) {
 // закрываем модалки ESC
 window.addEventListener("keydown", function (evt) {
    
-   console.log(evt.keyCode);
-   if (evt.keyCode === 27) {
+    if (evt.keyCode === 27) {
 
       mapModal.classList.remove("modal-show");
       evt.preventDefault();

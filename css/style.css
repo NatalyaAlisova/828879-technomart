@@ -105,7 +105,7 @@ input[name="search"] {
   display: flex;
   align-items: center;
   padding: 0px;
-
+  background: none;
   background-color: unset;
   border: none;
 }
@@ -374,6 +374,7 @@ input[name="search"]:focus + button .form-search-icon {
   width: 25px;   
   height: 20px;
   left: 12px;
+  vertical-align: middle;
   background-repeat: no-repeat;
 }
 
@@ -481,6 +482,7 @@ input[name="search"]:focus + button .form-search-icon {
   border-radius: 50%;
   margin-left: 11px;
   margin-bottom: 4px;
+  vertical-align: middle;
 }
 
 .nav-user-item:hover a,
@@ -491,12 +493,6 @@ input[name="search"]:focus + button .form-search-icon {
 .nav-user-item:active a,
 .nav-user-item-end:active a {
   color: rgba(50, 66, 92, 0.3);
-}
-
-/*временное свойство*/
-.center {
-
-  height: 2050px;
 }
 
 .info-company h2,
@@ -632,7 +628,6 @@ input[name="search"]:focus + button .form-search-icon {
 
 .reserved {
   margin-right: 163px;
-  margin-top: 37px;
 }
 
 .reserved p {
@@ -645,6 +640,8 @@ input[name="search"]:focus + button .form-search-icon {
   justify-content: center;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background-color: #222b3a;
  
 }
 
@@ -655,12 +652,12 @@ input[name="search"]:focus + button .form-search-icon {
 
 .footer-social {
   margin-right: 120px;
-  margin-top: 37px;
+  
 }
 
 .footer-social-list {
   margin-left: 73px;
-  margin-top: 37px;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -669,16 +666,10 @@ input[name="search"]:focus + button .form-search-icon {
   padding: 0;
 }
 
-.footer-social-item {
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #222b3a;
-}
-
-
 .footer-bottom-wrapper {
   display: flex;
   padding-bottom: 28px;
+  padding-top: 37px;
 }
 
 
@@ -704,7 +695,8 @@ input[name="search"]:focus + button .form-search-icon {
 .product-list,
 .pagination-list,
 .profile-block,
-.arrows-list {
+.arrows-list,
+.footer-social-list {
   list-style: none;
 }
 
@@ -851,11 +843,6 @@ h2 {
   margin: 0;
 }
 
-.footer-feedback,
-.footer-developing {
-  margin-top: 37px;
-}
-
 .footer-feedback {
   margin-right: 52px;
 }
@@ -939,7 +926,7 @@ h2 {
   width: 20px;   
   height: 18px;
   left: 12px;
-
+  vertical-align: middle;
   opacity: 0.3;
   background-repeat: no-repeat;
 
@@ -1141,6 +1128,7 @@ h2 {
 .price-controls label {
   display: inline-block;
   width: 40%;
+  vertical-align: middle;
 }
 
 .price-controls input {
@@ -1312,8 +1300,14 @@ h2 {
 
 }
 
-.developers-option:hover {
-  opacity: 0.6;
+.developers-input-chekbox:hover + label:after {
+  opacity: 1;
+  border-color: #b5b5b5;
+}
+
+.developers-input-chekbox:hover + label:before {
+  opacity: 1;
+  border-color: #b5b5b5;
 }
 
 .developers-input-radio + label::before {
@@ -1342,6 +1336,16 @@ h2 {
 
   background-color: #c5c5c5;
   border-radius: 50%;
+}
+
+.developers-input-radio:hover + label:after {
+  opacity: 1;
+  border-color: #b5b5b5;
+}
+
+.developers-input-radio:hover + label:before {
+  opacity: 1;
+  border-color: #b5b5b5;
 }
 
 .developers-option {
@@ -1442,6 +1446,11 @@ h2 {
   border-bottom: 1px dotted #ee3643;
 }
 
+.sorting-filter-price-active {
+  color: #ee3643;
+  border-bottom: none;
+}
+
 .paginator-filter .up,
 .paginator-filter .down {
   position: absolute;
@@ -1465,6 +1474,11 @@ h2 {
 
 .paginator-filter-icon {
   fill: #c5c5c5;
+}
+
+.up .paginator-filter-icon-active {
+  fill: #ee3643;
+  border-bottom: none;
 }
 
 .sorting-filter-price:hover,
@@ -1530,7 +1544,7 @@ h2 {
   text-indent: -1000px;
   overflow: hidden;
   z-index: 20;
-
+  vertical-align: middle;
   background: url("../img/content-img/new-flag.png") no-repeat 0 0;
 }
 
@@ -2007,9 +2021,10 @@ input[name="user-email"]:focus {
   z-index: 33;
   width: 620px;
   padding-top: 66px;
-
+  margin-left: -310px;
+  margin-top: -207px;
   border-top: 7px solid #ee3643;
-  transform: translate(-50%, -50%);
+  
 }
 
 .modal-show {

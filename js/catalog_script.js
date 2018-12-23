@@ -1,5 +1,3 @@
-console.log('файл скриптов подключен');
-
 
 // объявление переменных
 var addToBasketBtns = document.querySelectorAll('.product-hidden .buy'); //коллекция кнопок "Купить" в карточке товара
@@ -11,8 +9,7 @@ var continueShoppingBtn = document.querySelector('.continue-shopping'); // кн�
 
 // вешаем обработчик на все кнопки купить
 for (var i = 0; i < addToBasketBtns.length; i++) {
-   		console.log(i);
-		addToBasketBtns[i].addEventListener ("click", function (evt) {
+   		addToBasketBtns[i].addEventListener ("click", function (evt) {
 			    evt.preventDefault();
 				popupAddToBasket.classList.add('modal-show');
 		}); 
