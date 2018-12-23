@@ -1312,30 +1312,9 @@ h2 {
 
 }
 
-.developers-input-chekbox:checked:hover + label::after,
-.developers-input-chekbox:hover + label::after {
+.developers-option:hover {
   opacity: 0.6;
 }
-
-/*.developers-input-chekbox + label::after {
-  opacity: 0.3;
-}
-
-.developers-input-chekbox + label:hover:after {
-  opacity: 0.4;
-}
-
-.developers-input-chekbox + label:hover:before {
-  opacity: 0.8;
-}
-
-.developers-input-radio + label:hover:after {
-  opacity: 1;
-}
-
-.developers-input-radio + label:hover:before {
-  opacity: 0.6;
-}*/
 
 .developers-input-radio + label::before {
   content: "";
@@ -1554,18 +1533,6 @@ h2 {
 
   background: url("../img/content-img/new-flag.png") no-repeat 0 0;
 }
-  /*position: absolute;
-  top: -1px;
-  right: -1px;
-  width: 60px;
-  height: 60px;
-  text-indent: -1000px;
-  overflow: hidden;
-  z-index: 20;
-}
-.product-item:before {
-    background: url("../img/content-img/new-flag.png") no-repeat 0 0;
-}*/
 
 .product-item .product-img-wrapper {
   width: 218px;
