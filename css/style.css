@@ -307,13 +307,9 @@ input[name="search"]:focus + button .form-search-icon {
   padding-bottom: 18px;
 }
 
-.header-middle-wrapper {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.header-bottom-wrapper {
+.header-middle-wrapper,
+.header-bottom-wrapper,
+.banner-block-wrapper {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -697,7 +693,10 @@ input[name="search"]:focus + button .form-search-icon {
 .profile-block,
 .arrows-list,
 .footer-social-list,
-.simple-row-list {
+.simple-row-list,
+.popular-developers-item,
+.services-list,
+.simple-row-list-slider {
   list-style: none;
 }
 
@@ -730,6 +729,209 @@ h3 {
   color: #000000;
   text-transform: uppercase;
 }
+
+.banner-block {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.simple-row-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.simple-row-item {
+  position: relative;
+  width: 255px;
+  height: 80px;
+  
+ }
+
+.simple-row-item.materials {
+  background-color: #ffbf47;
+  background-image: url('../img/svg/icon-1.svg');
+  background-repeat: no-repeat;
+  background-position: 213px 31px;
+  padding: 21px 23px;
+}
+
+.simple-row-item.instruments {
+  background-color: #3bbce3;
+  background-image: url('../img/svg/icon-2.svg');
+  background-repeat: no-repeat;
+  background-position: 198px 31px;
+  padding: 21px 22px;
+}
+
+.simple-row-item.equipment {
+  background-color: #dc91d8;
+  background-image: url('../img/svg/icon-3.svg');
+  background-repeat: no-repeat;
+  background-position: 190px 31px;
+  padding: 21px 22px;
+}
+
+.simple-row-item.sale {
+  background-color: #8ed78f;
+  background-image: url('../img/svg/icon-4.svg');
+  background-repeat: no-repeat;
+  background-position: 195px 26px;
+  padding: 21px 22px;
+  margin-bottom: 20px;
+}
+
+.simple-row-item.delivery-simple-row-item {
+  background-color: #ffc047;
+  background-image: url('../img/svg/icon-5.svg');
+  background-repeat: no-repeat;
+  background-position: 191px 32px;
+  padding: 21px 22px;
+}
+
+.simple-row-item p {
+  margin: 0px;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #ffffff; 
+}
+
+.simple-row-item a {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.simple-row-link {
+  padding: 10px 26px;
+
+  border-radius: 3px;
+}
+
+.materials-link {
+  background-color: #e5ac40;
+}
+
+.instruments-link {
+  background-color: #35a9cc;
+  margin-left: 2px;
+}
+
+.equipment-link {
+  background-color: #c682c2;
+  padding: 10px 31px;
+}
+
+.sale-link {
+  background-color: #80c180;
+  padding: 10px 24px;
+}
+
+.delivery-link {
+  background-color: #e5ac40;
+  padding: 10px 38px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 620px;
+}
+
+.slider-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.simple-row-list-slider {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 300px;
+}
+
+.slider-title {
+  margin-left: 24px;
+  margin-top: 23px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+
+}
+
+.slider-img {
+  background-image: url('../img/content-img/layer-99.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
+.slider-slogan {
+  margin-left: 25px;
+  margin-top: 2px;
+  margin-bottom: 122px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.33;
+  color: #ffffff;
+}
+
+.open-catalog-link {
+  width: 195px;
+  margin-left: 27px;
+  padding: 10px;
+  background-color: #ee3643;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.open-catalog-link:hover {
+  background-color: #ca2c37;
+}
+
+.open-catalog-link:active {
+ background-color: #ba2732;
+}
+
+.simple-row-link:hover {
+  opacity: 0.7;
+}
+
+.simple-row-link:active {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .info-contact-wrapper {
   box-sizing: border-box;
