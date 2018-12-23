@@ -495,8 +495,8 @@ input[name="search"]:focus + button .form-search-icon {
   color: rgba(50, 66, 92, 0.3);
 }
 
-.info-company h2,
-.contact h2 {
+.info-company h3,
+.contact h3 {
   font-weight: normal;
 }
 
@@ -696,7 +696,8 @@ input[name="search"]:focus + button .form-search-icon {
 .pagination-list,
 .profile-block,
 .arrows-list,
-.footer-social-list {
+.footer-social-list,
+.simple-row-list {
   list-style: none;
 }
 
@@ -723,7 +724,7 @@ input[name="search"]:focus + button .form-search-icon {
   color: #ee3643;
 }
 
-h2 {
+h3 {
   font-size: 30px;
   line-height: 30px;
   color: #000000;
