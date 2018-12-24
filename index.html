@@ -108,53 +108,76 @@
 	</header>
 
 	<main>
-		<div class="conteiner banner-block-wrapper">
-			<section class="banner-block">
-				<div class="simple-row">
-					<ul class="simple-row-list">
-						<li class="simple-row-item materials product-new">
+		
+		<section class="banner-block">
+			<div class="conteiner banner-block-wrapper">
+				<div class="banners">
+					<ul class="banners-list">
+						<li class="banners-item banners-item-materials banner-item-new">
 							<p>Материалы</p>
-							<a class="simple-row-link materials-link" href="#">
+							<a class="banners-item-link materials-link" href="#">
 								На любой вкус
 							</a>
 						</li>
-						<li class="simple-row-item instruments">
+						<li class="banners-item banners-item-instruments">
 							<p>Инструмент</p>
-							<a class="simple-row-link instruments-link" href="#">
+							<a class="banners-item-link instruments-link" href="#">
 								На все случаи
 							</a>
 						</li>
-						<li class="simple-row-item equipment">
+						<li class="banners-item banners-item-equipment">
 							<p>Техника</p>
-							<a class="simple-row-link equipment-link" href="#">
+							<a class="banners-item-link equipment-link" href="#">
 								Для стройки
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="slider-row">
+
 					<div class="slider slider-img">
-						<span class="slider-title">Дрели</span>
-						<span class="slider-slogan">Соседям на радость!</span>
-						<a class="open-catalog-link" href="catalog.html">Открыть каталог</a>
+        				<input class="visually-hidden" type="radio" id="product-1" name="toggle">
+        				<input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
+						<div class="slider-controls">
+							<label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+          					<label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+        			    </div>
+					    <ul class="slider-list">
+					    	<li class="slider-item">
+					    		<h3 class="slider-title">Перфораторы</h3>
+					    		<p class="slider-slogan">Настоящие мужские игрушки</p>
+					    		<a class="open-catalog-link" href="catalog.html">Открыть каталог</a>
+					    	</li>
+					    	<li class="slider-item">
+					    		<h3 class="slider-title">Дрели</h3>
+								<p class="slider-slogan">Соседям на радость!</p>
+								<a class="open-catalog-link" href="catalog.html">Открыть каталог</a>
+					    	</li>
+					    </ul>  
+
+
+
+
+						
 					</div>
-					<ul class="simple-row-list-slider">
-						<li class="simple-row-item sale">
+					<ul class="banners-list-slider">
+						<li class="banners-item sale">
 							<p>Скидки 50%</p>
-							<a class="simple-row-link sale-link" href="#">
+							<a class="banners-item-link sale-link" href="#">
 								На 350 товаров
 							</a>
 						</li>
-						<li class="simple-row-item delivery-simple-row-item">
+						<li class="banners-item delivery-simple-row-item">
 							<p>Доставка</p>
-							<a class="simple-row-link delivery-link" href="#">
+							<a class="banners-item-link delivery-link" href="#">
 								Бесплатно
 							</a>
 						</li>
 					</ul>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
+		
 
 		
 		<section class="popular">
