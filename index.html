@@ -133,49 +133,45 @@
 						</li>
 					</ul>
 				</div>
+
 				<div class="slider-row">
+		            <div class="slider-controls-wrap">
+		                <button class="slider-control"></button>
+		                <button class="slider-control slider-control-active"></button>
+		            </div>
 
-					<div class="slider slider-img">
-        				<input class="visually-hidden" type="radio" id="product-1" name="toggle">
-        				<input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
-						<div class="slider-controls">
-							<label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
-          					<label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
-        			    </div>
-					    <ul class="slider-list">
-					    	<li class="slider-item">
-					    		<h3 class="slider-title">Перфораторы</h3>
-					    		<p class="slider-slogan">Настоящие мужские игрушки</p>
-					    		<a class="open-catalog-link" href="catalog.html">Открыть каталог</a>
-					    	</li>
-					    	<li class="slider-item">
-					    		<h3 class="slider-title">Дрели</h3>
-								<p class="slider-slogan">Соседям на радость!</p>
-								<a class="open-catalog-link" href="catalog.html">Открыть каталог</a>
-					    	</li>
-					    </ul>  
+		            <button class="slider-toggle slider-toggle-prev"></button>
+		            <button class="slider-toggle slider-toggle-next"></button>
 
+		            <div class="slides-wrap">
+		                <div class="slide slide-perforators">
+		                    <h3 class="slide-title">Перфораторы</h3>
+		                    <p class="slide-slogan">Настоящие мужские игрушки</p>
+		                    <a class="slide-catalog-link" href="catalog.html">Открыть каталог</a>
+		                </div>
+		                <div class="slide slide-dreli shown">
+		                    <h3 class="slide-title">Дрели</h3>
+		                    <p class="slide-slogan">Соседям на радость!</p>
+		                    <a class="slide-catalog-link" href="catalog.html">Открыть каталог</a>
+		                </div>
+		            </div>
+		        </div>  
 
-
-
-						
-					</div>
-					<ul class="banners-list-slider">
-						<li class="banners-item sale">
-							<p>Скидки 50%</p>
-							<a class="banners-item-link sale-link" href="#">
-								На 350 товаров
-							</a>
-						</li>
-						<li class="banners-item delivery-simple-row-item">
-							<p>Доставка</p>
-							<a class="banners-item-link delivery-link" href="#">
-								Бесплатно
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+				<ul class="banners-list-slider">
+					<li class="banners-item sale">
+						<p>Скидки 50%</p>
+						<a class="banners-item-link sale-link" href="#">
+							На 350 товаров
+						</a>
+					</li>
+					<li class="banners-item delivery-simple-row-item">
+						<p>Доставка</p>
+						<a class="banners-item-link delivery-link" href="#">
+							Бесплатно
+						</a>
+					</li>
+				</ul>
+			</div>			
 		</section>
 		
 
@@ -288,68 +284,71 @@
 						<div class="product-info">
 							<h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
 							<p class="product-item-price-old"></p>
-							<p class="product-item-price">12500 P.</p>
+							<a href="#" class="product-item-price">12500 P.</a>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</section>
 
-		<div class="conteiner popular-developers-wrapper">
+		
 			<section class="popular-developers">
-				<div class="popular-developers-title-wrapper">
-					<h2 class="popular-developers-title">Популярные производители:</h2>
-					<a class="all-developers-link" href="#">
-						Все производители
-					</a>
+				<div class="conteiner popular-developers-wrapper">
+					<div class="popular-developers-title-wrapper">
+						<h2 class="popular-developers-title">Популярные производители:</h2>
+						<a class="all-developers-link" href="#">
+							Все производители
+						</a>
+					</div>
+					<ul class="popular-developers-list">
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/bosch.jpg" width="126" height="37" alt="BOSCH">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/makita.jpg" width="123" height="40" alt="Makita">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/de-walt.jpg" width="146" height="44" alt="Dewalt">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/interscol.jpg" width="200" height="88" alt="Интерскол">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/hitachi.jpg" width="169" height="31" alt="Hitachi">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/lg.jpg" width="121" height="73" alt="LG">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/aeg.jpg" width="151" height="96" alt="AEG">
+							</a>
+						</li>
+						<li class="popular-developers-item">
+							<a href="#">
+								<img src="img/content-img/metabo.jpg" width="204" height="69" alt="Matebo">
+							</a>
+						</li>
+					</ul>
 				</div>
-				<ul class="popular-developers-list">
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/bosch.jpg" width="126" height="37" alt="BOSCH">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/makita.jpg" width="123" height="40" alt="Makita">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/de-walt.jpg" width="146" height="44" alt="Dewalt">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/interscol.jpg" width="200" height="88" alt="Интерскол">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/hitachi.jpg" width="169" height="31" alt="Hitachi">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/lg.jpg" width="121" height="73" alt="LG">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/aeg.jpg" width="151" height="96" alt="AEG">
-						</a>
-					</li>
-					<li class="popular-developers-item">
-						<a href="#">
-							<img src="img/content-img/metabo.jpg" width="204" height="69" alt="Matebo">
-						</a>
-					</li>
-				</ul>
 			</section>
-		</div>
+		
 
-		<div class="services-wrapper">
-			<section class="services">
+		
+		<section class="services">
+			<div class="services-wrapper">
 				<h2 class="visually-hidden">Информация о сервисных услугах</h2>
 				<div class="services-info">
 					<h3>Сервисы</h3>
@@ -359,39 +358,36 @@
 					</p>
 				</div>
 				<div class="services-list-wrapper">
-					<div>	
-						<ul class="services-list">
-							<li class="services-item">
-								<a class="services-delivery" href="#">
-									Доставка
-								</a>
-							</li>
-							<li class="services-item">
-								<a class="services-security" href="#">
-									Гарантия
-								</a>
-								
-							</li>
-							<li class="services-item">
-								<a class="services-credit" href="#">
-									Кредит
-								</a>
-								
-							</li>
-						</ul>
-					</div>
-					<div class="services-delivery-info services-delivery-img">
-						<h3>Доставка</h3>
-						<p class="services-delivery-text ">
-							Мы с удовольствием доставим ваш товар прямо 
-							к вашему подъезду совершенно бесплатно!
-							Ведь мы неплохо заработаем, 
-							поднимая его на ваш этаж!
-						</p>
-					</div>
+					<ul class="services-list">
+						<li class="services-item">
+							<a class="services-delivery" href="#">
+								Доставка
+							</a>
+						</li>
+						<li class="services-item">
+							<a class="services-security" href="#">
+								Гарантия
+							</a>
+						</li>
+						<li class="services-item">
+							<a class="services-credit" href="#">
+								Кредит
+							</a>
+						</li>
+					</ul>
 				</div>
-			</section>
-		</div>
+				<div class="services-delivery-info services-delivery-img">
+					<h3>Доставка</h3>
+					<p class="services-delivery-text ">
+						Мы с удовольствием доставим ваш товар прямо 
+						к вашему подъезду совершенно бесплатно!
+						Ведь мы неплохо заработаем, 
+						поднимая его на ваш этаж!
+					</p>
+				</div>
+				</div>
+			</div>
+		</section>
 			
 		<div class="conteiner info-contact-wrapper">
 			<section class="info">

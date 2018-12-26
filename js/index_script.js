@@ -1,4 +1,92 @@
 //---------------------------------------
+// Слайдер 
+//---------------------------------------
+
+(function () {
+// кнопки перелистывания следующий/предыдущий слайд
+var btnPrev = document.querySelector('.slider-toggle-prev'),
+    btnNext = document.querySelector('.slider-toggle-next');
+
+var images = document.querySelectorAll('.slide'); // коллекция изображений
+
+var pointsArray = document.querySelectorAll('.slider-control'); // круглые кнопки внизу
+
+var counter = 0;   // обьявляем и инициализируем собственную переменную-счетчик
+btnPrev.disabled = true;   // отключаем предыдущую кнопку
+
+btnPrev.addEventListener('click', function() {  
+    images[counter].classList.remove('shown');
+    pointsArray[counter].classList.remove('slider-control-active');
+    counter--;
+    images[counter].classList.add('shown');
+    pointsArray[counter].classList.add('slider-control-active');
+    btnNext.disabled = false;
+
+    // disable btnPrev if we are on the first slide
+    if (counter === 0) {
+      btnPrev.disabled = true;
+    }
+});
+
+btnNext.addEventListener('click', function() {
+    images[counter].classList.remove('shown');
+    pointsArray[counter].classList.remove('slider-control-active');
+    counter++;
+    images[counter].classList.add('shown');
+    pointsArray[counter].classList.add('slider-control-active');
+    console.log(btnPrev.disabled);
+    btnPrev.disabled = false;
+  
+    // disable btnNext if we are on the last slide
+    if (counter === images.length - 1) {
+      btnNext.disabled = true;
+    }
+});
+
+let slideThroughPoints = function () {
+  // I used this trick only for IE compatibility
+  [].forEach.call(pointsArray, function(point, index) {
+    point.addEventListener('click', function (evt) {
+      if (index === counter) {
+          evt.preventDefault();
+          return;
+      } else {
+          // проверочки 
+          console.log(counter);
+          console.log(pointsArray[index]);
+          console.log(index);
+          console.log(images[index]);
+        
+          pointsArray[counter].classList.remove('slider-control-active'); // удаляем активный класс с начальной точки
+          images[counter].classList.remove('shown'); // скрываем изначальную картинку
+          counter = index; // приравниваем счетчик к индексу
+          images[index].classList.add('shown'); // добавляем класс shown соответствующей картинке
+          point.classList.add('slider-control-active'); // добавляем класс active точке, на которую кликнули
+        
+          if (counter === images.length - 1) {
+            btnNext.disabled = true; // кнопка disabled
+            btnPrev.disabled = false; // кнопка активна
+          } else if (counter === 0) {
+            btnNext.disabled = false; // кнопка активна
+            btnPrev.disabled = true; // отключаем предыдущую кнопку
+          } else {
+            btnNext.disabled = false;  // обе кнопки активны
+            btnPrev.disabled = false;
+          }
+      }
+    });
+  });
+};
+
+slideThroughPoints();
+
+})();
+
+
+
+
+
+//---------------------------------------
 // Показываем окно с картой
 //---------------------------------------
 
