@@ -951,7 +951,8 @@ h3 {
   color: #fff;
 }
 
-.slide-catalog-link {
+.slide-catalog-link,
+.services-button {
   position: absolute;
   padding: 11px 20px 8px;
   bottom: 23px;
@@ -970,6 +971,11 @@ h3 {
   border-radius: 3px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.services-item .services-button {
+  left: 320px;
+  bottom: 125px;
 }
 
 .slide-catalog-link:hover {
@@ -1132,14 +1138,23 @@ h3 {
 }
 
 .services-list {
+  width: 625px;
+
   margin: 0;
   padding: 0;
-  margin-top: 54px;
+  margin-top: 56px;
+  margin-left: 80px;
 }
 
 .services-item {
-  display: flex;
+  display: none;
+  padding: 0 0 65px 0;
+  min-height: 295px;
 }
+
+/*.services-item:nth-child(1) {
+  display: block;
+}*/
 
 .services-security,
 .services-credit {
@@ -1156,21 +1171,39 @@ h3 {
   background-color: #32425c;
 }
 
-.services-item .services-delivery {
+.services-slider-controls {
+  display: flex;
+  flex-direction: column;
+  margin-top: 57px;
+}
+
+.services-slider-controls label {
   width: 240px;
   height: 61px;
   padding: 13px 22px;
   font-size: 21px;
   font-weight: bold;
   line-height: 1.43;
+  font-style: normal;
   letter-spacing: normal;
   text-align: left;
   color: #32425c;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.services-title {
+  margin: 0;
+  font-size: 36px;
 }
 
 .services-list-wrapper {
+  position: relative;
   display: flex;
+  width: 940px;
+  justify-content: flex-start;
+  min-height: 295px;
+
 }
 
 .services-delivery-info {
@@ -1180,13 +1213,33 @@ h3 {
 }
 
 .services-delivery-text {
-  width: 320px;
+  width: 283px;
+  margin-top: 28px;
 }
 
-.services-delivery-img {
-  background: url('../img/content-img/layer-131.png') no-repeat 150px 53px;
+.services-slide:nth-child(1) {
+  background: url('../img/content-img/layer-131.png') no-repeat 150px 22px;
 }
 
+.services-slide:nth-child(2) {
+  background: url('../img/content-img/layer-130.png') no-repeat 150px 22px;
+}
+
+.services-slide:nth-child(3) {
+  background: url('../img/content-img/layer-119.png') no-repeat 150px 22px;
+}
+
+#product-1:checked ~ .services-list .services-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .services-list .services-item:nth-child(2) {
+  display: block;
+}
+
+#product-3:checked ~ .services-list .services-item:nth-child(3) {
+  display: block;
+}
 
 .info-contact-wrapper {
   
@@ -1195,7 +1248,8 @@ h3 {
 }
 
 .info-text,
-.contact-text {
+.contact-text,
+.services-delivery-text {
   
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
