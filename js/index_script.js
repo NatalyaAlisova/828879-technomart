@@ -3,76 +3,72 @@
 //---------------------------------------
 
 (function () {
-// кнопки перелистывания следующий/предыдущий слайд
+// находим кнопки перелистывания "Следующий / предыдущий слайд"
 var btnPrev = document.querySelector('.slider-toggle-prev'),
     btnNext = document.querySelector('.slider-toggle-next');
+    
+var images = Array.from(document.querySelectorAll('.slide')); // коллекция изображений
 
-var images = document.querySelectorAll('.slide'); // коллекция изображений
+var shownImage = document.querySelector('.shown'); // изображение, которое мы сразу показываем
 
-var pointsArray = document.querySelectorAll('.slider-control'); // круглые кнопки внизу
+var shownPoint = document.querySelector('.slider-control-active'); // активная точка
+
+var pointsArray = document.querySelectorAll('.slider-control'); // нижние круглые кнопки
+
+
+var counter2 = images.indexOf(shownImage);
 
 var counter = 0;   // обьявляем и инициализируем собственную переменную-счетчик
-btnPrev.disabled = true;   // отключаем предыдущую кнопку
 
-btnPrev.addEventListener('click', function() {  
-    images[counter].classList.remove('shown');
-    pointsArray[counter].classList.remove('slider-control-active');
-    counter--;
-    images[counter].classList.add('shown');
-    pointsArray[counter].classList.add('slider-control-active');
-    btnNext.disabled = false;
-
-    // disable btnPrev if we are on the first slide
-    if (counter === 0) {
-      btnPrev.disabled = true;
+btnPrev.addEventListener('click', function() {
+  
+    if (counter2 === 0) {
+      images[counter2].classList.remove('shown');
+      pointsArray[counter2].classList.remove('slider-control-active');
+      counter2 = images.length - 1;
+    } else {
+      images[counter2].classList.remove('shown');
+      pointsArray[counter2].classList.remove('slider-control-active');
+      counter2--; 
     }
+  
+    images[counter2].classList.add('shown');
+    pointsArray[counter2].classList.add('slider-control-active');
 });
 
 btnNext.addEventListener('click', function() {
-    images[counter].classList.remove('shown');
-    pointsArray[counter].classList.remove('slider-control-active');
-    counter++;
-    images[counter].classList.add('shown');
-    pointsArray[counter].classList.add('slider-control-active');
-    console.log(btnPrev.disabled);
-    btnPrev.disabled = false;
-  
-    // disable btnNext if we are on the last slide
-    if (counter === images.length - 1) {
-      btnNext.disabled = true;
+    
+    if (counter2 === images.length - 1) {
+        images[counter2].classList.remove('shown');
+        pointsArray[counter2].classList.remove('slider-control-active');
+        counter2 = 0;
+    } else {
+      images[counter2].classList.remove('shown');
+      pointsArray[counter2].classList.remove('slider-control-active');
+      counter2++;
     }
+  
+    images[counter2].classList.add('shown');
+    pointsArray[counter2].classList.add('slider-control-active');
 });
 
 let slideThroughPoints = function () {
-  // I used this trick only for IE compatibility
+  
   [].forEach.call(pointsArray, function(point, index) {
     point.addEventListener('click', function (evt) {
-      if (index === counter) {
+      if (index === counter2) {
           evt.preventDefault();
           return;
       } else {
-          // проверочки 
-          console.log(counter);
-          console.log(pointsArray[index]);
-          console.log(index);
-          console.log(images[index]);
         
-          pointsArray[counter].classList.remove('slider-control-active'); // удаляем активный класс с начальной точки
-          images[counter].classList.remove('shown'); // скрываем изначальную картинку
-          counter = index; // приравниваем счетчик к индексу
+          pointsArray[counter2].classList.remove('slider-control-active'); // удаляем активный класс с начальной точки
+          images[counter2].classList.remove('shown'); // скрываем изначальную картинку
+          counter2 = index; // приравниваем счетчик к надетому индексу
           images[index].classList.add('shown'); // добавляем класс shown соответствующей картинке
           point.classList.add('slider-control-active'); // добавляем класс active точке, на которую кликнули
         
-          if (counter === images.length - 1) {
-            btnNext.disabled = true; // кнопка disabled
-            btnPrev.disabled = false; // кнопка активна
-          } else if (counter === 0) {
-            btnNext.disabled = false; // кнопка активна
-            btnPrev.disabled = true; // отключаем предыдущую кнопку
-          } else {
             btnNext.disabled = false;  // обе кнопки активны
             btnPrev.disabled = false;
-          }
       }
     });
   });
@@ -81,9 +77,6 @@ let slideThroughPoints = function () {
 slideThroughPoints();
 
 })();
-
-
-
 
 
 //---------------------------------------
