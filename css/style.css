@@ -2055,24 +2055,12 @@ h3 {
   background: url('../img/svg/checkbox-on.svg') no-repeat 0 0;
 }
 
-.developers-input-chekbox:disabled+label,
-.developers-input-chekbox:disabled+label::after {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.developers-input-radio:disabled+label,
-.developers-input-radio:disabled+label::after {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.developers-input-chekbox:hover + label:after {
+.developers-input-chekbox:hover + label::after {
   opacity: 1;
   border-color: #b5b5b5;
 }
 
-.developers-input-chekbox:hover + label:before {
+.developers-input-chekbox:hover + label::before {
   opacity: 1;
   border-color: #b5b5b5;
 }
@@ -2082,11 +2070,12 @@ h3 {
 
   position: absolute;
   left: -1px;
-  top: -1px;
-
-  width: 16px;
-  height: 16px;
+  top: 50%;
+ 
+  width: 25px;
+  height: 25px;
   
+  transform: translateY(-50%);
   border: 4px solid #c5c5c5;
   border-radius: 50%;
 }
@@ -2095,7 +2084,7 @@ h3 {
   content: ' ';
 
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 7px;
 
   width: 8px;
@@ -2114,6 +2103,8 @@ h3 {
   opacity: 1;
   border-color: #b5b5b5;
 }
+
+
 
 .developers-option {
   margin-bottom: 20px;
