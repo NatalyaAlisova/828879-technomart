@@ -739,7 +739,7 @@ input[name="search"]:focus + button .form-search-icon {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 524px;
+  width: 581px;
   margin: 0;
   padding: 0;
   padding-top: 29px;
@@ -1578,15 +1578,15 @@ outline-style: none;
 }
 
 .catalog-item a {
-  margin: 0 22px;
+  margin: 0 58px;
 
   font-size: 18px;
   line-height: 24px;
   color: #ffd180;
 }
 
-.catalog-item a:last-child {
- /* margin-right: 0;*/
+.catalog-item a:last-of-type {
+  margin-right: 0;
 }
 
 .catalog-item {
