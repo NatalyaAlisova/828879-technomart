@@ -181,6 +181,10 @@ input[name="search"]:hover {
   background-color: #212a3a;
 }
 
+.form-search input[name="search"]::-ms-clear {
+ display: none;
+}
+
 .bookmark-link:active,
 .cart:active {
   color: rgba(255, 255, 255, 0.6);
@@ -703,6 +707,10 @@ input[name="search"]:focus + button .form-search-icon {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+}
+
+.footer-navigation-item {
+  line-height: 33px;
 }
 
 .footer-navigation-item a {
@@ -1585,12 +1593,14 @@ outline-style: none;
   color: #ffd180;
 }
 
-.catalog-item a:last-of-type {
+.catalog-item:last-of-type {
   margin-right: 0;
 }
 
 .catalog-item {
   padding: 0;
+  max-width: 140px;
+  padding-left: 4px;
 }
 
 .footer-top {
