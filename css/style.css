@@ -1,20 +1,23 @@
 body {
   margin: 0;
   
-  font-family: "Cuprum", "Arial", "sans-serif";
+  font-family: 'Cuprum', 'Arial', 'sans-serif';
   font-size: 14px;
   line-height: 24px;
-  
   color: #000000;
   font-weight: normal;
     
   background-color: #ffffff;
   box-sizing: inherit;
-
 }
 
 * {
   box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 a {
@@ -130,7 +133,7 @@ input::placeholder {
   box-sizing: unset;
 }
 
-.form-search:hover button .form-search-icon,
+.form-search:hover .form-search-icon,
 .bookmark-link:hover .bookmark-link-icon,
 .cart:hover .cart-icon {
   fill: #ffffff;
@@ -351,7 +354,6 @@ input[name="search"]:focus + button .form-search-icon {
   font-style: italic;
   font-weight: normal;
   letter-spacing: normal;
-  
   color: #ee3643;
 }
 
@@ -482,11 +484,11 @@ input[name="search"]:focus + button .form-search-icon {
   display: inline-block;
   width: 4px;
   height: 4px;
-  
-  border-radius: 50%;
   margin-left: 11px;
   margin-bottom: 4px;
+
   vertical-align: middle;
+  border-radius: 50%;
   background-color: #32425c;
 }
 
@@ -673,7 +675,7 @@ input[name="search"]:focus + button .form-search-icon {
 
 .breadcrumbs-item a,
 .breadcrumbs-item-end a {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   line-height: 1.38px;
   font-weight: normal;
@@ -696,7 +698,7 @@ input[name="search"]:focus + button .form-search-icon {
 .arrows-list,
 .footer-social-list,
 .banners-list,
-.popular-developers-item,
+.popular-developers-list,
 .services-list,
 .banners-list-slider {
   list-style: none;
@@ -744,16 +746,18 @@ h3 {
   padding: 0;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin-left: -20px;
 }
 
 .banners-item {
   position: relative;
-  width: 299px;
+  width: 300px;
   height: 123px;
   background-repeat: no-repeat;
   padding: 21px 23px;
-  margin-right: 21px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .banners-item.banners-item-materials {
@@ -853,20 +857,18 @@ h3 {
   justify-content: center;
   width: 620px;
   height: 266px;
-  margin-right: 20px;
 }
 
 .slider-controls-wrap {
   position: absolute;
   bottom: 18px;
   left: 50%;
-  transform: translateX(-50%);
-
+  z-index: 1000;
   height: 29px;
 
   text-align: center;
 
-  z-index: 1000;
+  transform: translateX(-50%);
 }
 
 .slider-control {
@@ -914,15 +916,19 @@ h3 {
   right: 21px;
 }
 
-.slider-toggle::after,.slider-toggle::before {
+.slider-toggle::after,
+.slider-toggle::before {
+  content: ' ';
+
   position: absolute;
-  content: "";
   display: block;
   left: 50%;
+  z-index: 1000;
+
   width: 3px;
   height: 28px;
+
   background-color: #fff;
-  z-index: 1000;
 }
 
 .slider-toggle::before {
@@ -933,11 +939,13 @@ h3 {
   top: 15px;
 }
 
-.slider-toggle-next::after,.slider-toggle-prev::before {
+.slider-toggle-next::after,
+.slider-toggle-prev::before {
   transform: rotate(45deg);
 }
 
-.slider-toggle-next::before,.slider-toggle-prev::after {
+.slider-toggle-next::before,
+.slider-toggle-prev::after {
   transform: rotate(-45deg);
 }
 
@@ -954,7 +962,7 @@ h3 {
 
   font-size: 18px;
   line-height: 24px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .slide-title {
@@ -965,10 +973,10 @@ h3 {
 
   font-size: 36px;
   line-height: 30px;
-  font-family: "Cuprum","Arial","sans-serif";
+  font-family: 'Cuprum','Arial','sans-serif';
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
 }
 
 .slide-catalog-link,
@@ -980,7 +988,7 @@ h3 {
   padding: 11px 20px 8px;
   bottom: 23px;
   
-  font-family: "Cuprum","Arial","sans-serif";
+  font-family: 'Cuprum','Arial','sans-serif';
   font-size: 14px;
   line-height: 1.29;
   font-weight: 700;
@@ -1094,10 +1102,11 @@ h3 {
 .popular-developers-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-left: -20px;
 }
 
 .popular-developers-item a {
@@ -1112,6 +1121,7 @@ h3 {
 
 .popular-developers-item {
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .popular-developers-item:active {
@@ -1147,7 +1157,7 @@ h3 {
   width: 417px;
   margin-top: 27px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
 }
 
@@ -1205,6 +1215,10 @@ h3 {
   cursor: pointer;
 }
 
+.services-slider-controls label:not(:last-of-type) {
+  border-bottom: 2px solid #4d637b;
+}
+
 .services-title {
   margin: 0;
 
@@ -1239,11 +1253,6 @@ h3 {
 .services-delivery-text {
   width: 283px;
   margin-top: 28px;
-}
-
-.slider-controls-item-2 {
-  border-bottom: 2px solid #4d637b;
-  border-top: 2px solid #4d637b;
 }
 
 .services-slider-controls label:hover {
@@ -1289,7 +1298,7 @@ h3 {
 .info-text,
 .contact-text,
 .services-delivery-text {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -1555,7 +1564,7 @@ h3 {
 }
 
 .breadcrumbs li::after {
-  content: "";
+  content: ' ';
   position: absolute;
   top: 5px;
   right: -24px;
@@ -1596,7 +1605,7 @@ h3 {
   padding: 9px 18px;
   margin-top: 22px;
   
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-weight: normal;
   line-height: 1.38;
@@ -1614,7 +1623,7 @@ h3 {
 .filter-item legend,
 .filter-developers-option legend,
 .filter-developers-option-nutr legend {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 17px;
   line-height: 1.76px;
   font-weight: bold;
@@ -1687,7 +1696,7 @@ h3 {
   width: 95px;
   padding: 9px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 17px;
   text-align: center;
   font-weight: normal;
@@ -1775,7 +1784,7 @@ h3 {
 }
 
 .filters legend { 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 17px;
   line-height: 30px;
   color: #000000;
@@ -1791,7 +1800,7 @@ h3 {
   margin-top: 13px;
 
   list-style: none;
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
@@ -1808,7 +1817,7 @@ h3 {
 }
 
 .developers-input-chekbox:not(:checked) + label::before {
-  content: "";
+  content: ' ';
   position: absolute;
   left: 0;
   top: 0;
@@ -1821,7 +1830,7 @@ h3 {
 }
 
 .developers-input-chekbox:checked + label::after {
-  content: "";
+  content: ' ';
 
   position: absolute;
   left: -1px;
@@ -1855,7 +1864,7 @@ h3 {
 }
 
 .developers-input-radio + label::before {
-  content: "";
+  content: ' ';
 
   position: absolute;
   left: -1px;
@@ -1869,7 +1878,7 @@ h3 {
 }
 
 .developers-input-radio:checked + label::after {
-  content: "";
+  content: ' ';
 
   position: absolute;
   top: 7px;
@@ -1895,7 +1904,7 @@ h3 {
 .developers-option {
   margin-bottom: 20px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 15px;
   font-weight: normal;
   letter-spacing: normal;
@@ -1907,7 +1916,7 @@ h3 {
   padding: 10px 38px;
   margin-top: 58px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-weight: normal;
   line-height: 1.38;
@@ -1955,7 +1964,7 @@ h3 {
   margin: 0;
   margin-left: 12px;
   
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-weight: normal;
   letter-spacing: normal;
@@ -1976,7 +1985,7 @@ h3 {
 }
 
 .sorting-filter a {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-weight: normal;
  
@@ -1986,7 +1995,7 @@ h3 {
 .sorting-filter-price,
 .sorting-filter-type,
 .sorting-filter-function {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-weight: normal;
   color: #acaaa5;
@@ -2103,7 +2112,7 @@ h3 {
   overflow: hidden;
   
   vertical-align: middle;
-  background: url("../img/content-img/new-flag.png") no-repeat 0 0;
+  background: url('../img/content-img/new-flag.png') no-repeat 0 0;
 }
 
 .product-item .product-img-wrapper {
@@ -2150,7 +2159,7 @@ h3 {
 }
 
 .product-info .product-item-price:after{
-  content: "";
+  content: ' ';
   position: absolute;
   top: 0;
   right: -27px;
@@ -2184,7 +2193,7 @@ h3 {
    
   font-size: 14px;
   font-weight: normal;
-  font-family: "Cuprum", "Arial", "sans-serif";
+  font-family: 'Cuprum', 'Arial', 'sans-serif';
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase; 
@@ -2207,6 +2216,7 @@ h3 {
 .product-item .product-hidden {
   display: none;
 }
+
 .product-item:hover .product-hidden {
   display: block;
 }
@@ -2265,7 +2275,7 @@ h3 {
 }
 
 .product-info h3 {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 18px;
   font-weight: bold;
   line-height: 1.11;
@@ -2273,7 +2283,7 @@ h3 {
 }
 
 .product-item-price-old {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 17px;
   font-weight: bold;
   line-height: 1.06;
@@ -2282,7 +2292,7 @@ h3 {
 }
 
 .product-item-price {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 17px;
   font-weight: bold;
   line-height: 1.06;
@@ -2314,7 +2324,7 @@ h3 {
   display: block;
   padding: 17px 14px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-weight: normal;
   line-height: 1.38px;
@@ -2374,7 +2384,7 @@ h3 {
   margin-top: 1px;
   margin-bottom: 66px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   font-size: 13px;
   font-weight: normal;
@@ -2497,7 +2507,7 @@ h3 {
 }
 
 .modal-search-name input[type="text"]::placeholder { 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   color: #999999; } 
 
@@ -2527,7 +2537,7 @@ h3 {
   height: 91px;
   padding: 10px;
 
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: 'PT Sans', 'Arial', 'sans-serif';
   font-size: 13px;
   color: #999999;
 
@@ -2669,7 +2679,7 @@ input[name="user-email"]:focus {
 
 .modal-close::before,
 .modal-close::after {
-  content: "";
+  content: ' ';
 
   position: absolute;
   top: 9px;

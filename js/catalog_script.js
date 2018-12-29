@@ -9,30 +9,30 @@ var continueShoppingBtn = document.querySelector('.continue-shopping'); // кн�
 
 // вешаем обработчик на все кнопки купить
 for (var i = 0; i < addToBasketBtns.length; i++) {
-   		addToBasketBtns[i].addEventListener ("click", function (evt) {
+   		addToBasketBtns[i].addEventListener ('click', function (evt) {
 			    evt.preventDefault();
 				popupAddToBasket.classList.add('modal-show');
 		}); 
 	}
 
 //  закрывем модалку
-modalCloseBtn.addEventListener ("click", function (evt) {
+modalCloseBtn.addEventListener ('click', function (evt) {
 	    evt.preventDefault();
 		popupAddToBasket.classList.remove('modal-show');
 	});
 
 // закрываем модалку по кнопке "Продолжить покупки"
-continueShoppingBtn.addEventListener ("click", function (evt) {
+continueShoppingBtn.addEventListener ('click', function (evt) {
 	    evt.preventDefault();
 		popupAddToBasket.classList.remove('modal-show');
 	});
 
 // закрываем модалки ESC
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (popupAddToBasket.classList.contains("modal-show")) {
-        popupAddToBasket.classList.remove("modal-show");
+      if (popupAddToBasket.classList.contains('modal-show')) {
+        popupAddToBasket.classList.remove('modal-show');
        }
     }
   });

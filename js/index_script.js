@@ -16,54 +16,52 @@ var shownPoint = document.querySelector('.slider-control-active'); // актив
 var pointsArray = document.querySelectorAll('.slider-control'); // нижние круглые кнопки
 
 
-var counter2 = images.indexOf(shownImage);
-
-var counter = 0;   // обьявляем и инициализируем собственную переменную-счетчик
+var counter = images.indexOf(shownImage);
 
 btnPrev.addEventListener('click', function() {
   
-    if (counter2 === 0) {
-      images[counter2].classList.remove('shown');
-      pointsArray[counter2].classList.remove('slider-control-active');
-      counter2 = images.length - 1;
+    if (counter === 0) {
+      images[counter].classList.remove('shown');
+      pointsArray[counter].classList.remove('slider-control-active');
+      counter = images.length - 1;
     } else {
-      images[counter2].classList.remove('shown');
-      pointsArray[counter2].classList.remove('slider-control-active');
-      counter2--; 
+      images[counter].classList.remove('shown');
+      pointsArray[counter].classList.remove('slider-control-active');
+      counter--; 
     }
   
-    images[counter2].classList.add('shown');
-    pointsArray[counter2].classList.add('slider-control-active');
+    images[counter].classList.add('shown');
+    pointsArray[counter].classList.add('slider-control-active');
 });
 
 btnNext.addEventListener('click', function() {
     
-    if (counter2 === images.length - 1) {
-        images[counter2].classList.remove('shown');
-        pointsArray[counter2].classList.remove('slider-control-active');
-        counter2 = 0;
+    if (counter === images.length - 1) {
+        images[counter].classList.remove('shown');
+        pointsArray[counter].classList.remove('slider-control-active');
+        counter = 0;
     } else {
-      images[counter2].classList.remove('shown');
-      pointsArray[counter2].classList.remove('slider-control-active');
-      counter2++;
+      images[counter].classList.remove('shown');
+      pointsArray[counter].classList.remove('slider-control-active');
+      counter++;
     }
   
-    images[counter2].classList.add('shown');
-    pointsArray[counter2].classList.add('slider-control-active');
+    images[counter].classList.add('shown');
+    pointsArray[counter].classList.add('slider-control-active');
 });
 
 let slideThroughPoints = function () {
   
   [].forEach.call(pointsArray, function(point, index) {
     point.addEventListener('click', function (evt) {
-      if (index === counter2) {
+      if (index === counter) {
           evt.preventDefault();
           return;
       } else {
         
-          pointsArray[counter2].classList.remove('slider-control-active'); // удаляем активный класс с начальной точки
-          images[counter2].classList.remove('shown'); // скрываем изначальную картинку
-          counter2 = index; // приравниваем счетчик к надетому индексу
+          pointsArray[counter].classList.remove('slider-control-active'); // удаляем активный класс с начальной точки
+          images[counter].classList.remove('shown'); // скрываем изначальную картинку
+          counter = index; // приравниваем счетчик к надетому индексу
           images[index].classList.add('shown'); // добавляем класс shown соответствующей картинке
           point.classList.add('slider-control-active'); // добавляем класс active точке, на которую кликнули
         
@@ -89,24 +87,24 @@ var mapModal = document.querySelector('.modal-map'); //модальное окн
 var mapClose = mapModal.querySelector('.modal-close'); //закрыть карту (крестик)
 
 // открываем карту 
-mapContact.addEventListener("click", function (evt) {
+mapContact.addEventListener('click', function (evt) {
    evt.preventDefault();
-   mapModal.classList.add("modal-show");
+   mapModal.classList.add('modal-show');
   });
 
 
 //  закрывем модалку
-mapClose.addEventListener("click", function (evt) {
+mapClose.addEventListener('click', function (evt) {
    evt.preventDefault();
-   mapModal.classList.remove("modal-show");
+   mapModal.classList.remove('modal-show');
   });
 
 // закрываем модалки ESC
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
    
     if (evt.keyCode === 27) {
 
-      mapModal.classList.remove("modal-show");
+      mapModal.classList.remove('modal-show');
       evt.preventDefault();
    }
   });
@@ -120,23 +118,23 @@ var buttonWrite = document.querySelector('.button-write'); //кнопка "За�
 var modalFeedback = document.querySelector('.modal-search'); //модальное окно с формой обратной связи
 var modalClose = modalFeedback.querySelector('.modal-close'); //закрыть карту (крестик)
 
-var form = modalFeedback.querySelector("form"); //форма обратной связи
-var modalName = modalFeedback.querySelector("[name=user-name]"); // имя фамилия
-var modalEmail = modalFeedback.querySelector("[name=user-email]"); 
+var form = modalFeedback.querySelector('form'); //форма обратной связи
+var modalName = modalFeedback.querySelector('[name=user-name]'); // имя фамилия
+var modalEmail = modalFeedback.querySelector('[name=user-email]'); 
 
 var isStorageSupport = true;
-var storage = "";
+var storage = '';
   
   try {
-    storage = localStorage.getItem("modalName");
+    storage = localStorage.getItem('modalName');
   } catch (err) {
     isStorageSupport = false;
   }
 
 // открываем окно обратной связи
-buttonWrite.addEventListener("click", function (evt) {
+buttonWrite.addEventListener('click', function (evt) {
   	evt.preventDefault();
-  	modalFeedback.classList.add("modal-show");
+  	modalFeedback.classList.add('modal-show');
 
     if (storage) {
       modalName.value = storage;
@@ -147,32 +145,32 @@ buttonWrite.addEventListener("click", function (evt) {
   });
 
 // закрываем модалку
-modalClose.addEventListener("click", function (evt) {
+modalClose.addEventListener('click', function (evt) {
     evt.preventDefault();
-    modalFeedback.classList.remove("modal-show");
-    modalFeedback.classList.remove("modal-error");
+    modalFeedback.classList.remove('modal-show');
+    modalFeedback.classList.remove('modal-error');
   });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     if (!modalName.value || !modalEmail.value) {
       evt.preventDefault();
-      modalFeedback.classList.remove("modal-error");
+      modalFeedback.classList.remove('modal-error');
       modalFeedback.offsetWidth = modalFeedback.offsetWidth;
-      modalFeedback.classList.add("modal-error");
+      modalFeedback.classList.add('modal-error');
     } else { 
       if (isStorageSupport) {
-        localStorage.setItem("modalName", modalName.value); // сохраняет в storage имя и фамилию
+        localStorage.setItem('modalName', modalName.value); // сохраняет в storage имя и фамилию
       }
     } 
   });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (modalFeedback.classList.contains("modal-show")) {
-        modalFeedback.classList.remove("modal-show");
-        modalFeedback.classList.remove("modal-error");
+      if (modalFeedback.classList.contains('modal-show')) {
+        modalFeedback.classList.remove('modal-show');
+        modalFeedback.classList.remove('modal-error');
       }
     }
   });
