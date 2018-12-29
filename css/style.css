@@ -700,7 +700,9 @@ input[name="search"]:focus + button .form-search-icon {
   margin: 0;
   padding: 0;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .footer-navigation-item a {
@@ -1475,6 +1477,14 @@ h3 {
   background-color: #ffffff;
 }
 
+#product1:focus~.services-slider-controls .slider-controls-item-1, 
+#product2:focus~.services-slider-controls .slider-controls-item-2, 
+#product3:focus~.services-slider-controls .slider-controls-item-3 { 
+-webkit-box-shadow: 0 0 2px #00f; 
+        box-shadow: 0 0 2px #00f; 
+outline-style: none;
+}
+
 .info-contact-wrapper {
   margin-top: 48px;
   margin-bottom: 84px;
@@ -2028,6 +2038,8 @@ h3 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+
+  opacity: 0.77;
 }
 
 .developers-input-chekbox:not(:checked) + label::before {
@@ -2055,12 +2067,25 @@ h3 {
   background: url('../img/svg/checkbox-on.svg') no-repeat 0 0;
 }
 
+.developers-input-chekbox:disabled+label,
+.developers-input-chekbox:disabled+label::after {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.developers-input-radio:disabled+label,
+.developers-input-radio:disabled+label::after {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .developers-input-chekbox:hover + label::after {
   opacity: 1;
   border-color: #b5b5b5;
 }
 
-.developers-input-chekbox:hover + label::before {
+.developers-input-chekbox:hover + label::before,
+.developers-input-chekbox:hover + label {
   opacity: 1;
   border-color: #b5b5b5;
 }
@@ -2075,7 +2100,11 @@ h3 {
   width: 25px;
   height: 25px;
   
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  
+      -ms-transform: translateY(-50%);
+  
+          transform: translateY(-50%);
   border: 4px solid #c5c5c5;
   border-radius: 50%;
 }
@@ -2099,12 +2128,16 @@ h3 {
   border-color: #b5b5b5;
 }
 
-.developers-input-radio:hover + label:before {
+.developers-input-radio:hover + label:before,
+.developers-input-radio:hover + label {
   opacity: 1;
   border-color: #b5b5b5;
 }
 
-
+.developers-input:focus + label { 
+  -webkit-box-shadow: 0 0 2px #00f; 
+          box-shadow: 0 0 2px #00f; 
+}
 
 .developers-option {
   margin-bottom: 20px;
