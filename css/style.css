@@ -2921,6 +2921,7 @@ outline-style: none;
 
   border: 2px solid #dee3e4;
   border-radius: 3px;
+  resize: none;
 }
 
 input[name="user-name"]:hover,
