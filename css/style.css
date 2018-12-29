@@ -699,9 +699,6 @@ input[name="search"]:focus + button .form-search-icon {
           align-items: flex-end;
   margin: 0;
   padding: 0;
-  min-height: 64px;
-      width: 100%;
-    
     display: flex;
     justify-content: flex-end;
 }
