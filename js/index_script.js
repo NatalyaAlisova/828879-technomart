@@ -81,7 +81,7 @@ slideThroughPoints();
 // Показываем окно с картой
 //---------------------------------------
 
-var mapContact = document.querySelector('.contact img'); //мини картинка с картой
+var mapContact = document.querySelector('.contact .mini-map'); //мини картинка с картой
 
 var mapModal = document.querySelector('.modal-map'); //модальное окно с большой картой
 var mapClose = mapModal.querySelector('.modal-close'); //закрыть карту (крестик)
