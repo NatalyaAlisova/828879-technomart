@@ -626,6 +626,7 @@ input[name='search']:focus + button .form-search-icon {
 }
 
 .button-about-company {
+  max-width: 90%;
   padding: 7px 41px;
   margin-top: 20px;
 
@@ -641,17 +642,14 @@ input[name='search']:focus + button .form-search-icon {
 }
 
 .contact .mini-map {
-  display: block;
-  margin-top: 17px;
-
-  cursor: pointer;
+  display: flex;
 }
 
 .button-write {
   width: 300px;
-  height: 38px;
+  
   padding: 7px;
-  margin-top: 33px;
+  margin-top: 40px;
 
   text-align: center;
   text-transform: uppercase;
@@ -676,6 +674,7 @@ input[name='search']:focus + button .form-search-icon {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  align-items: flex-end;
 }
 
 .footer-logo {
@@ -853,7 +852,7 @@ input[name='search']:focus + button .form-search-icon {
   color: #ee3643;
 }
 
-h3 {
+.middle-title {
   font-size: 30px;
   line-height: 30px;
   color: #000000;

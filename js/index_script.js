@@ -7,7 +7,7 @@
 var btnPrev = document.querySelector('.slider-toggle-prev'),
     btnNext = document.querySelector('.slider-toggle-next');
     
-var images = Array.from(document.querySelectorAll('.slide')); // коллекция изображений
+var images = Array.prototype.slice.call(document.querySelectorAll('.slide')); // коллекция изображений
 
 var shownImage = document.querySelector('.shown'); // изображение, которое мы сразу показываем
 
@@ -50,7 +50,7 @@ btnNext.addEventListener('click', function() {
     pointsArray[counter].classList.add('slider-control-active');
 });
 
-let slideThroughPoints = function () {
+var slideThroughPoints = function () {
   
   [].forEach.call(pointsArray, function(point, index) {
     point.addEventListener('click', function (evt) {
