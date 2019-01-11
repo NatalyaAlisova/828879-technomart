@@ -2202,12 +2202,11 @@ input[name='search']:focus + button .form-search-icon {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   
-  width: 685px;
+  width: 692px;
   margin-top: 19px;
   margin-bottom: 21px;
   
-  padding-top: 8px;
-  padding-left: 8px;
+  padding: 8px 0 7px 8px;
   background-color: #f7f3ec;
   border-radius: 2px;
 }
@@ -2218,12 +2217,12 @@ input[name='search']:focus + button .form-search-icon {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   width: 685px;
 }
 
 .catalog-filter h3 {
-  width: 100px;
+  width: 198px;
   margin: 0;
   margin-left: 12px;
   
@@ -2241,15 +2240,15 @@ input[name='search']:focus + button .form-search-icon {
   flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 455px;
+          justify-content: flex-start;
+  max-width: 490px;
   padding: 0;
   margin: 0;
 }
 
 .arrows-item {
-  margin-left: 3px;
-  margin-right: 34px;
+  margin-left: 23px;
+  margin-right: 45px;
 }
 
 .sorting-filter a {
@@ -2277,24 +2276,23 @@ input[name='search']:focus + button .form-search-icon {
 
 .paginator-filter .up,
 .paginator-filter .down {
-  position: absolute;
-  padding: 10px;
-
+  position: relative;
+  
   border: none;
   background-color: #f7f3ec;
   cursor: pointer;
 }
 
 .paginator-filter .up {
-  top: 2px;
-  right: 32px;
+  top: 1px;
+  right: 6px;
 
   outline: none;
 }
 
 .paginator-filter .down {
-  top: 2px;
-  right: 0px;
+  top: 1px;
+  right: -3px;
 
   outline: none;
 }
