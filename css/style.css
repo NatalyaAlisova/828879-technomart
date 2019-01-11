@@ -85,6 +85,7 @@ input[type='radio'].visually-hidden {
     
 .main-header-logo {
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,28 +152,33 @@ input[name='search'] {
           align-items: center;
   padding: 13px;
   padding-left: 17px;
+
   background: none;
   border: none;
 }
 
 input::-webkit-input-placeholder {
- color: #ffffff;
  padding-right: 10px;
+
+ color: #ffffff;
 }
 
 input:-ms-input-placeholder {
- color: #ffffff;
  padding-right: 10px;
+ 
+ color: #ffffff;
 }
 
 input::-ms-input-placeholder {
- color: #ffffff;
  padding-right: 10px;
+ 
+ color: #ffffff;
 }
 
 input::placeholder {
- color: #ffffff;
  padding-right: 10px;
+ 
+ color: #ffffff;
 } 
 
 .form-search-icon {
@@ -458,6 +464,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .header-phone:before {
   content: ' ';
+
   position: absolute;
   display: inline-block;
   width: 25px;   
@@ -517,12 +524,12 @@ input[name='search']:focus + button .form-search-icon {
           align-items: center;
   
   -webkit-box-shadow: inset 0px -5px 0 0 #293449;
-  
           box-shadow: inset 0px -5px 0 0 #293449;
 }
 
 .header-phone {
   position: relative;
+
   width: 270px;
   height: 45px;
   padding: 10px;
@@ -583,6 +590,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .nav-user-item::after { 
   content: ' ';
+
   display: inline-block;
   width: 4px;
   height: 4px;
@@ -626,7 +634,7 @@ input[name='search']:focus + button .form-search-icon {
 }
 
 .button-about-company {
-  max-width: 90%;
+  max-width: 400px;
   padding: 7px 41px;
   margin-top: 20px;
 
@@ -961,21 +969,25 @@ input[name='search']:focus + button .form-search-icon {
 
 .instruments-link {
   margin-left: 2px;
+
   background-color: #35a9cc;
 }
 
 .equipment-link {
   padding: 10px 31px;
+
   background-color: #c682c2;
 }
 
 .sale-link {
   padding: 10px 24px;
+
   background-color: #80c180;
 }
 
 .delivery-link {
   padding: 10px 38px;
+
   background-color: #e5ac40;
 }
 
@@ -1001,9 +1013,7 @@ input[name='search']:focus + button .form-search-icon {
   text-align: center;
 
   -webkit-transform: translateX(-50%);
-
       -ms-transform: translateX(-50%);
-
           transform: translateX(-50%);
 }
 
@@ -1124,6 +1134,7 @@ input[name='search']:focus + button .form-search-icon {
 .slide-catalog-link,
 .services-button {
   position: absolute;
+
   left: 26px;
   width: 195px;
   min-height: 38px;
@@ -1301,6 +1312,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .services {
   margin-top: 66px;
+
   background-color: #f4f7f9;
 }
 
@@ -1372,6 +1384,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .services-slider-controls label {
   position: relative;
+
   width: 240px;
   height: 61px;
   padding: 13px 22px;
@@ -1400,6 +1413,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .services-list-wrapper {
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1412,6 +1426,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .services-list::before {
   content: ' ';
+
   position: absolute;
   top: 17px;
   left: 230px;
@@ -1525,6 +1540,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .info-partners-item:before {
   content: ' ';
+
   display: inline-block;
   width: 25px;
   height: 2px;
@@ -1537,6 +1553,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .button {
   display: inline-block;
+
   font: inherit;
   text-align: center;
   color: #ffffff;
@@ -1554,7 +1571,6 @@ input[name='search']:focus + button .form-search-icon {
   color: #ffffff;
 
   -webkit-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
-
           box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
 }
@@ -1707,8 +1723,8 @@ input[name='search']:focus + button .form-search-icon {
 
 .profile-link:before {
   content: ' ';
-  position: absolute;
 
+  position: absolute;
   display: inline-block;
   width: 20px;   
   height: 18px;
@@ -1800,12 +1816,14 @@ input[name='search']:focus + button .form-search-icon {
 
 .breadcrumbs li {
   position: relative;
+
   margin-right: 40px;
   margin-top: 18px;
 }
 
 .breadcrumbs li::after {
   content: ' ';
+
   position: absolute;
   top: 5px;
   right: -24px;
@@ -1902,6 +1920,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .range-controls .toggle {
   position: absolute;
+
   top: 28px;
   left: 0;
 
@@ -1952,14 +1971,15 @@ input[name='search']:focus + button .form-search-icon {
 
 .filter-developers-option {
   position: relative;
+
   margin-bottom: 20px;
 }
 
 .filter-developers-option::after,
 .filter-developers-option::before {
   content: ' ';
+
   position: absolute;
-  
   width: 100%;
   height: 1px;
     
@@ -1976,19 +1996,23 @@ input[name='search']:focus + button .form-search-icon {
 
 .max-price {
   position: relative;
+
   margin-left: 32px;
 }
 
 .max-price:before {
   content: ' ';
+
   position: absolute;
+  left: -18px;
+  top: 18px;
+  
   width: 10px;
   height: 1px;
+
   background-color: #444444;
   vertical-align: middle;
   text-align: center;
-  left: -18px;
-  top: 18px;
 }
 
 .filters {
@@ -2003,9 +2027,10 @@ input[name='search']:focus + button .form-search-icon {
 .filter-developers-option,
 .filter-developers-option-nutr { 
   margin-bottom: 13px;
-  border: none;
   margin: 0;
   padding: 0;
+
+  border: none;
 }
 
 .filter-developers-option {
@@ -2056,6 +2081,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .developers-input-chekbox:not(:checked) + label::before {
   content: ' ';
+
   position: absolute;
   left: 0;
   top: 0;
@@ -2195,18 +2221,15 @@ input[name='search']:focus + button .form-search-icon {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  
   width: 692px;
   margin-top: 19px;
   margin-bottom: 21px;
-  
   padding: 8px 0 7px 8px;
+
   background-color: #f7f3ec;
   border-radius: 2px;
 }
@@ -2369,13 +2392,13 @@ input[name='search']:focus + button .form-search-icon {
 .product-new:before,
 .banner-item-new:before {
   content: ' ';
+
   position: absolute;
   top: -1px;
   right: -1px;
   z-index: 20;
 
   display: inline-block;
-  
   width: 60px;
   height: 60px;
 
@@ -2433,6 +2456,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .product-info .product-item-price:after {
   content: ' ';
+
   position: absolute;
   top: 0;
   right: -27px;
@@ -2446,6 +2470,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .product-item .product-hidden {
   position: absolute;
+
   top: 0;
   left: 0;
   z-index: 10;
@@ -2458,7 +2483,6 @@ input[name='search']:focus + button .form-search-icon {
 
 .product-hidden .buy,
 .product-hidden .bookmark {
-  
   width: 135px;
   margin: 0 auto;
   margin-bottom: 8px;
@@ -2779,7 +2803,6 @@ input[name='search']:focus + button .form-search-icon {
   position: fixed;
  
   -webkit-box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
- 
           box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   background-color: #ffffff;
 }
@@ -2804,7 +2827,6 @@ input[name='search']:focus + button .form-search-icon {
   margin: 0 auto;
 
   -webkit-box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-
           box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
@@ -2993,7 +3015,7 @@ input[name='user-email']:focus {
 }
 
 .modal-map p {
-  margin: 0px;
+  margin: 0;
 }
 
 .modal-map iframe {
@@ -3025,7 +3047,6 @@ input[name='user-email']:focus {
   display: block;
 
   -webkit-animation: bounce 0.6s;
-
           animation: bounce 0.6s;
 }
 

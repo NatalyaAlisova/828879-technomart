@@ -3,7 +3,7 @@
 //---------------------------------------
 
 (function () {
-// находим кнопки перелистывания "Следующий / предыдущий слайд"
+// находим кнопки перелистывания 'Следующий / предыдущий слайд'
 var btnPrev = document.querySelector('.slider-toggle-prev'),
     btnNext = document.querySelector('.slider-toggle-next');
     
@@ -113,7 +113,7 @@ window.addEventListener('keydown', function (evt) {
 // Показываем окно с обратной связью
 //---------------------------------------
 
-var buttonWrite = document.querySelector('.button-write'); //кнопка "Заблудились?"
+var buttonWrite = document.querySelector('.button-write'); //кнопка 'Заблудились?'
 
 var modalFeedback = document.querySelector('.modal-search'); //модальное окно с формой обратной связи
 var modalClose = modalFeedback.querySelector('.modal-close'); //закрыть карту (крестик)

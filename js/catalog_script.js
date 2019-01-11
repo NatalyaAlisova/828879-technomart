@@ -1,10 +1,10 @@
 
 // объявление переменных
-var addToBasketBtns = document.querySelectorAll('.product-hidden .buy'); //коллекция кнопок "Купить" в карточке товара
+var addToBasketBtns = document.querySelectorAll('.product-hidden .buy'); //коллекция кнопок 'Купить' в карточке товара
  	
-var popupAddToBasket = document.querySelector('.modal-added-cart'); //модальное окно с окном "товар добавлен в корзину"
+var popupAddToBasket = document.querySelector('.modal-added-cart'); //модальное окно с окном 'товар добавлен в корзину'
 var modalCloseBtn = document.querySelector('.modal-close'); // закрытие окна (крестик)
-var continueShoppingBtn = document.querySelector('.continue-shopping'); // кнопка "Продолжить покупки"
+var continueShoppingBtn = document.querySelector('.continue-shopping'); // кнопка 'Продолжить покупки'
 
 
 // вешаем обработчик на все кнопки купить
@@ -21,7 +21,7 @@ modalCloseBtn.addEventListener ('click', function (evt) {
 		popupAddToBasket.classList.remove('modal-show');
 	});
 
-// закрываем модалку по кнопке "Продолжить покупки"
+// закрываем модалку по кнопке 'Продолжить покупки'
 continueShoppingBtn.addEventListener ('click', function (evt) {
 	    evt.preventDefault();
 		popupAddToBasket.classList.remove('modal-show');
