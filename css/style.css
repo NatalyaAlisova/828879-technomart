@@ -650,6 +650,8 @@ input[name='search']:focus + button .form-search-icon {
 }
 
 .contact .mini-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -682,7 +684,9 @@ input[name='search']:focus + button .form-search-icon {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .footer-logo {
@@ -724,7 +728,8 @@ input[name='search']:focus + button .form-search-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2260,7 +2265,8 @@ input[name='search']:focus + button .form-search-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: flex-start;
@@ -2271,7 +2277,7 @@ input[name='search']:focus + button .form-search-icon {
 
 .arrows-item {
   margin-left: 23px;
-  margin-right: 45px;
+  margin-right: 44px;
 }
 
 .sorting-filter a {
